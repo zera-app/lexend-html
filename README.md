@@ -15,4 +15,4 @@ cd Lexend
 
 
 ## Preview
-![Lexend Dashboard Preview](./preview.png)
+![Lexend Dashboard Preview](./images/preview.png)
