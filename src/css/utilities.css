@@ -37,23 +37,3 @@ li,
 span {
 	@apply text-base;
 }
-
-a {
-	@apply text-primary dark:text-primary-dark;
-}
-
-a:hover {
-	@apply text-primary-dark dark:text-primary;
-}
-
-a:focus {
-	@apply text-primary-dark dark:text-primary;
-}
-
-a:active {
-	@apply text-primary-dark dark:text-primary;
-}
-
-a:visited {
-	@apply text-primary dark:text-primary-dark;
-}

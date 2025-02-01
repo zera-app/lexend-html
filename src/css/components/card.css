@@ -1,0 +1,71 @@
+.card {
+	@apply relative rounded-lg p-6 shadow-md transition-all duration-200;
+	background: var(--color-foreground);
+	color: var(--color-foreground-dark);
+}
+
+/* Card variants */
+.card-primary {
+	@apply border-2 bg-primary dark:bg-primary-dark text-white;
+	border-color: var(--color-primary);
+}
+
+.card-secondary {
+	@apply border-2 bg-secondary dark:bg-secondary-dark text-white;
+	border-color: var(--color-secondary);
+}
+
+.card-info {
+	@apply border-2 bg-info dark:bg-info-dark text-white;
+	border-color: var(--color-info);
+}
+
+.card-success {
+	@apply border-2 bg-success dark:bg-success-dark text-white;
+	border-color: var(--color-success);
+}
+
+.card-warning {
+	@apply border-2 bg-warning dark:bg-warning-dark text-black dark:text-black;
+	border-color: var(--color-warning);
+}
+
+.card-danger {
+	@apply border-2 bg-danger dark:bg-danger-dark text-white;
+	border-color: var(--color-danger);
+}
+
+/* Card hover effects */
+.card-hover:hover {
+	@apply transform scale-[1.02] shadow-lg;
+}
+
+/* Dark mode styles */
+.dark .card {
+	background: var(--color-foreground-dark);
+	color: var(--color-foreground);
+}
+
+/* Card sizes */
+.card-sm {
+	@apply p-4;
+}
+
+.card-lg {
+	@apply p-8;
+}
+
+/* Card header */
+.card-header {
+	@apply mb-4 text-xl font-semibold;
+}
+
+/* Card footer */
+.card-footer {
+	@apply mt-4 pt-4 border-t border-gray-200 dark:border-gray-700;
+}
+
+/* Card with loading state */
+.card.loading {
+	@apply animate-pulse;
+}

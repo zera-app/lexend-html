@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
 @theme {
-	--color-primary: #61SFFF;
+	--color-primary: #615fff;
 	--color-primary-dark: #7c86ff;
 	--color-secondary: #9333ea;
 	--color-secondary-dark: #c27aff;
@@ -19,14 +19,14 @@
 	--color-info: #00bbdb;
 	--color-info-dark: #0003f2;
 	--color-foreground: #ffffff;
-	--color-foreground-dark: #020618;
-	--color-background-dark: #0f172b;
-	--color-background: #FTF5F9;
+	--color-foreground-dark: #0f172a;
+	--color-background: #f1f5f9;
+	--color-background-dark: #020617;
 }
 
 /* Base Styles */
 body {
-	@apply font-sans text-base bg-background dark:bg-background-dark text-foreground-dark dark:text-foreground;
+	@apply font-sans text-base bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100;
 	font-family: "Lexend", sans-serif;
 }
 
@@ -36,24 +36,6 @@ html.dark body {
 
 * {
 	@apply transition-colors duration-200;
-}
-
-/* Layout */
-.main-content {
-	@apply relative flex flex-row;
-}
-
-.main-content aside {
-	@apply fixed left-0 h-[calc(100vh-4rem)] bg-white dark:bg-gray-800 transition-all duration-300 ease-in-out;
-	width: fit-content;
-}
-
-.main-content main {
-	@apply flex-1 transition-all duration-300 ease-in-out;
-}
-
-.main-content main.ml-64 {
-	@apply ml-80; /* 16px + 64px + 240px */
 }
 
 /* Transitions */
