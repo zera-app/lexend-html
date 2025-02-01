@@ -124,18 +124,23 @@
 					<div class="flex items-center justify-between">
 						<div class="flex items-center">
 							<button @click="sidebarOpen = !sidebarOpen" class="navbar-button">
+								<!-- Tabler menu icon -->
 								<svg
-									class="w-6 h-6 dark:text-gray-200"
-									fill="none"
-									stroke="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-menu-2 w-6 h-6 dark:text-gray-200"
+									width="24"
+									height="24"
 									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
 								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M4 6h16M4 12h16M4 18h16"
-									></path>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+									<line x1="4" y1="6" x2="20" y2="6" />
+									<line x1="4" y1="12" x2="20" y2="12" />
+									<line x1="4" y1="18" x2="20" y2="18" />
 								</svg>
 							</button>
 							<span class="ml-3 text-xl font-semibold dark:text-white"
@@ -146,51 +151,68 @@
 						<div class="flex items-center gap-4">
 							<!-- Notifications -->
 							<button class="navbar-button relative">
+								<!-- Tabler bell icon -->
 								<svg
-									class="w-6 h-6 dark:text-gray-200"
-									fill="none"
-									stroke="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-bell w-6 h-6 dark:text-gray-200"
+									width="24"
+									height="24"
 									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
 								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-									></path>
+										d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a1 1 0 0 0 .293 .707l1 1a1 1 0 0 1 -.707 1.707h-14a1 1 0 0 1 -.707 -1.707l1 -1a1 1 0 0 0 .293 -.707v-3a7 7 0 0 1 4 -6"
+									/>
+									<path d="M9 17h6" />
 								</svg>
 								<span class="navbar-notification-badge"></span>
 							</button>
 
 							<!-- Dark Mode Toggle -->
 							<button @click="toggleDarkMode()" class="navbar-button">
+								<!-- Tabler sun icon for light mode -->
 								<svg
 									x-show="!darkMode"
-									class="w-6 h-6"
-									fill="none"
-									stroke="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-sun w-6 h-6"
+									width="24"
+									height="24"
 									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
 								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+									<circle cx="12" cy="12" r="4" />
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-									></path>
+										d="M3 12h1M20 12h1M12 3v1M12 20v1M5.64 5.64l.707 .707M17.657 17.657l.707 .707M5.64 18.36l.707 -.707M17.657 6.343l.707 -.707"
+									/>
 								</svg>
+								<!-- Tabler moon icon for dark mode -->
 								<svg
 									x-show="darkMode"
-									class="w-6 h-6 dark:text-gray-200"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
 									fill="none"
 									stroke="currentColor"
-									viewBox="0 0 24 24"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-moon w-6 h-6 dark:text-gray-200"
 								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-									></path>
+										d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+									/>
 								</svg>
 							</button>
 						</div>
@@ -203,129 +225,146 @@
 				<div class="sidebar-icon">
 					<div>
 						<div class="inline-flex h-16 w-16 items-center justify-center">
-							<span
-								class="grid h-10 w-10 place-content-center rounded-sm bg-gray-100 dark:bg-gray-700 text-xs text-gray-600 dark:text-gray-300"
+							<a
+								href="#"
+								class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
 							>
-								L
-							</span>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-settings"
+								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+									<path
+										d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+									/>
+									<path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+								</svg>
+							</a>
 						</div>
 
 						<div class="border-t border-gray-100 dark:border-gray-700">
 							<div class="px-2">
-								<div class="py-4">
-									<a
-										href="#"
-										class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
-									>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											class="size-5 opacity-75"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke="currentColor"
-											stroke-width="2"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-											/>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-											/>
-										</svg>
-									</a>
-								</div>
-
 								<ul
 									class="space-y-1 border-t border-gray-100 dark:border-gray-700 pt-4"
 								>
 									<li>
 										<a
-											href="#"
+											href="dashboard/dashboard.html"
 											class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
 										>
+											<!-- Dashboard -->
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
-												class="size-5 opacity-75"
-												fill="none"
+												width="24"
+												height="24"
 												viewBox="0 0 24 24"
+												fill="none"
 												stroke="currentColor"
 												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="icon icon-tabler icons-tabler-outline icon-tabler-home-2"
 											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-												/>
+												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+												<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+												<path d="M10 12h4v4h-4z" />
 											</svg>
 										</a>
 									</li>
 
 									<li>
 										<a
-											href="#"
+											href="elements/button.html"
 											class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
 										>
+											<!-- Element -->
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
-												class="size-5 opacity-75"
-												fill="none"
+												width="24"
+												height="24"
 												viewBox="0 0 24 24"
+												fill="none"
 												stroke="currentColor"
 												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-html"
 											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-												/>
+												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+												<path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+												<path d="M2 21v-6" />
+												<path d="M5 15v6" />
+												<path d="M2 18h3" />
+												<path d="M20 15v6h2" />
+												<path d="M13 21v-6l2 3l2 -3v6" />
+												<path d="M7.5 15h3" />
+												<path d="M9 15v6" />
 											</svg>
 										</a>
 									</li>
 
 									<li>
 										<a
-											href="#"
+											href="components/accordion.html"
 											class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
 										>
+											<!-- Component Icon -->
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
-												class="size-5 opacity-75"
-												fill="none"
+												width="24"
+												height="24"
 												viewBox="0 0 24 24"
+												fill="none"
 												stroke="currentColor"
 												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="icon icon-tabler icons-tabler-outline icon-tabler-components"
 											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-												/>
+												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path d="M3 12l3 3l3 -3l-3 -3z" />
+												<path d="M15 12l3 3l3 -3l-3 -3z" />
+												<path d="M9 6l3 3l3 -3l-3 -3z" />
+												<path d="M9 18l3 3l3 -3l-3 -3z" />
 											</svg>
 										</a>
 									</li>
 
 									<li>
 										<a
-											href="#"
+											href="pages/index.html"
 											class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
 										>
+											<!-- Pages Icon -->
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
-												class="size-5 opacity-75"
-												fill="none"
+												width="24"
+												height="24"
 												viewBox="0 0 24 24"
+												fill="none"
 												stroke="currentColor"
 												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="icon icon-tabler icons-tabler-outline icon-tabler-article"
 											>
+												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+													d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
 												/>
+												<path d="M7 8h10" />
+												<path d="M7 12h10" />
+												<path d="M7 16h10" />
 											</svg>
 										</a>
 									</li>
@@ -376,14 +415,14 @@
 						<div class="px-4 py-6">
 							<ul class="space-y-1" x-data="{ selected: null }">
 								<li>
-									<a href="#" class="sidebar-link sidebar-link-active">
-										General
-									</a>
+									<a href="index.html" class="sidebar-link sidebar-link-active"
+										>Dashboard</a
+									>
 								</li>
 
 								<li x-data="{ open: false, subSelected: null }">
 									<button @click="open = !open" class="sidebar-dropdown-button">
-										<span class="text-sm font-medium">Teams</span>
+										<span class="text-sm font-medium">Element</span>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											class="sidebar-dropdown-icon"
@@ -400,55 +439,188 @@
 									</button>
 
 									<ul x-show="open" x-transition class="sidebar-dropdown">
-										<li x-data="{ subOpen: false }">
-											<button
-												@click="subOpen = !subOpen"
-												class="sidebar-nested-button"
-											>
-												<span>Team Settings</span>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													class="sidebar-dropdown-icon"
-													:class="{ 'open': subOpen }"
-													viewBox="0 0 20 20"
-													fill="currentColor"
-												>
-													<path
-														fill-rule="evenodd"
-														d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-														clip-rule="evenodd"
-													/>
-												</svg>
-											</button>
-
-											<ul
-												x-show="subOpen"
-												x-transition
-												class="sidebar-nested-dropdown"
-											>
-												<li>
-													<a href="#" class="sidebar-nested-link">
-														Permissions
-													</a>
-												</li>
-												<li>
-													<a href="#" class="sidebar-nested-link"> Members </a>
-												</li>
-											</ul>
-										</li>
-
 										<li>
-											<a href="#" class="sidebar-nested-link"> Calendar </a>
+											<a
+												href="elements/button.html"
+												class="sidebar-nested-link"
+												>Button</a
+											>
+										</li>
+										<li>
+											<a
+												href="elements/input.html"
+												class="sidebar-nested-link"
+												>Input</a
+											>
 										</li>
 									</ul>
 								</li>
 
-								<li>
-									<a href="#" class="sidebar-link"> Billing </a>
-								</li>
+								<li x-data="{ open: false, subSelected: null }">
+									<button @click="open = !open" class="sidebar-dropdown-button">
+										<span class="text-sm font-medium">Component</span>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="sidebar-dropdown-icon"
+											:class="{ 'open': open }"
+											viewBox="0 0 20 20"
+											fill="currentColor"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+									</button>
 
-								<li>
-									<a href="#" class="sidebar-link"> Invoices </a>
+									<ul x-show="open" x-transition class="sidebar-dropdown">
+										<li>
+											<a
+												href="components/accordion.html"
+												class="sidebar-nested-link"
+												>Accordion</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/alert.html"
+												class="sidebar-nested-link"
+												>Alert</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/badge.html"
+												class="sidebar-nested-link"
+												>Badge</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/breadcrumb.html"
+												class="sidebar-nested-link"
+												>Breadcrumb</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/dropdown.html"
+												class="sidebar-nested-link"
+												>Dropdown</a
+											>
+										</li>
+										<li>
+											<a href="components/card.html" class="sidebar-nested-link"
+												>Card</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/table.html"
+												class="sidebar-nested-link"
+												>Table</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/collapse.html"
+												class="sidebar-nested-link"
+												>Collapse</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/drawer.html"
+												class="sidebar-nested-link"
+												>Drawer</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/menu-list.html"
+												class="sidebar-nested-link"
+												>Menu List</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/modal.html"
+												class="sidebar-nested-link"
+												>Modal</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/pagination.html"
+												class="sidebar-nested-link"
+												>Pagination</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/popover.html"
+												class="sidebar-nested-link"
+												>Popover</a
+											>
+										</li>
+										<li>
+											<a href="components/tab.html" class="sidebar-nested-link"
+												>Tab</a
+											>
+										</li>
+										<li>
+											<a
+												href="components/tooltip.html"
+												class="sidebar-nested-link"
+												>Tooltip</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li x-data="{ open: false }">
+									<button @click="open = !open" class="sidebar-dropdown-button">
+										<span class="text-sm font-medium">Pages</span>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="sidebar-dropdown-icon"
+											:class="{ 'open': open }"
+											viewBox="0 0 20 20"
+											fill="currentColor"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+									</button>
+									<ul x-show="open" x-transition class="sidebar-dropdown">
+										<li>
+											<a href="pages/login.html" class="sidebar-nested-link"
+												>Login</a
+											>
+										</li>
+										<li>
+											<a href="pages/signup.html" class="sidebar-nested-link"
+												>Signup</a
+											>
+										</li>
+										<li>
+											<a
+												href="pages/forgot-password.html"
+												class="sidebar-nested-link"
+												>Forgot Password</a
+											>
+										</li>
+										<li>
+											<a
+												href="pages/reset-password.html"
+												class="sidebar-nested-link"
+												>Reset Password</a
+											>
+										</li>
+									</ul>
 								</li>
 							</ul>
 						</div>
@@ -500,18 +672,31 @@
 				@click="mobileMenuOpen = !mobileMenuOpen"
 				class="w-24 bg-primary dark:bg-primary-dark text-white dark:text-gray-200 rounded-full p-3 shadow-lg hover:bg-primary/90 dark:hover:bg-primary-dark/90 transition-colors duration-200 flex items-center justify-center gap-2"
 			>
+				<!-- Tabler menu icon -->
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6"
-					fill="none"
+					width="24"
+					height="24"
 					viewBox="0 0 24 24"
+					fill="none"
 					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="icon icon-tabler icons-tabler-outline icon-tabler-layout-dashboard"
 				>
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16M4 18h16"
+						d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1"
+					/>
+					<path
+						d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1"
+					/>
+					<path
+						d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1"
+					/>
+					<path
+						d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1"
 					/>
 				</svg>
 				<span class="text-sm font-medium">Menu</span>
@@ -533,118 +718,109 @@
 			<div class="space-y-4 py-2">
 				<!-- Settings -->
 				<a
-					href="#"
+					href="dashboard/dashboard.html"
 					class="flex items-center space-x-3 px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
 				>
+					<!-- Dashboard -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
+						class="h-5 w-5 opacity-75"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
+						stroke-width="2"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-						/>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-						/>
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+						<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+						<path d="M10 12h4v4h-4z" />
 					</svg>
-					<span>Settings</span>
+					<span>Dashboard</span>
 				</a>
 
-				<!-- Teams -->
+				<!-- Element -->
 				<a
 					href="#"
 					class="flex items-center space-x-3 px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						fill="none"
+						width="24"
+						height="24"
 						viewBox="0 0 24 24"
+						fill="none"
 						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-html"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-						/>
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+						<path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
+						<path d="M2 21v-6" />
+						<path d="M5 15v6" />
+						<path d="M2 18h3" />
+						<path d="M20 15v6h2" />
+						<path d="M13 21v-6l2 3l2 -3v6" />
+						<path d="M7.5 15h3" />
+						<path d="M9 15v6" />
 					</svg>
-					<span>Teams</span>
+					<span>Element</span>
 				</a>
 
-				<!-- Billing -->
+				<!-- Component -->
 				<a
 					href="#"
 					class="flex items-center space-x-3 px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						fill="none"
+						width="24"
+						height="24"
 						viewBox="0 0 24 24"
+						fill="none"
 						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-components"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-						/>
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M3 12l3 3l3 -3l-3 -3z" />
+						<path d="M15 12l3 3l3 -3l-3 -3z" />
+						<path d="M9 6l3 3l3 -3l-3 -3z" />
+						<path d="M9 18l3 3l3 -3l-3 -3z" />
 					</svg>
-					<span>Billing</span>
+					<span>Component</span>
 				</a>
 
-				<!-- Calculator -->
+				<!-- Pages -->
 				<a
 					href="#"
 					class="flex items-center space-x-3 px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						fill="none"
+						width="24"
+						height="24"
 						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-						/>
-					</svg>
-					<span>Calculator</span>
-				</a>
-
-				<!-- Profile -->
-				<a
-					href="#"
-					class="flex items-center space-x-3 px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
 						fill="none"
-						viewBox="0 0 24 24"
 						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-article"
 					>
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+							d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
 						/>
+						<path d="M7 8h10" />
+						<path d="M7 12h10" />
+						<path d="M7 16h10" />
 					</svg>
-					<span>Profile</span>
+					<span>Pages</span>
 				</a>
 
 				<!-- Divider -->
