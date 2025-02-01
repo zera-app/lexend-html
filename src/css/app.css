@@ -3,8 +3,6 @@
 @import "./components.css";
 @import "./utilities.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-
 @theme {
 	--color-primary: #615fff;
 	--color-primary-dark: #7c86ff;
