@@ -79,3 +79,31 @@ html.dark body {
 .loading-dot:nth-child(3) {
 	animation-delay: 0.3s;
 }
+
+/* Mobile Menu Popup Styles */
+.mobile-menu {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	z-index: 50;
+}
+
+.mobile-menu-popup {
+	position: fixed;
+	bottom: 5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	max-width: 320px;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 50;
+}
+.dark .mobile-menu-popup {
+	background-color: var(--color-background-dark);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
