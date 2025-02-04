@@ -564,9 +564,6 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
-  .top-16 {
-    top: calc(var(--spacing) * 16);
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -579,14 +576,8 @@
   .left-full {
     left: 100%;
   }
-  .isolate {
-    isolation: isolate;
-  }
   .z-10 {
     z-index: 10;
-  }
-  .z-\[10000\] {
-    z-index: 10000;
   }
   .z-\[100\] {
     z-index: 100;
@@ -645,6 +636,9 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-full {
+    height: 100%;
   }
   .max-h-64 {
     max-height: calc(var(--spacing) * 64);
@@ -981,29 +975,9 @@
       }
     }
   }
-  .md\:ml-0 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:ml-12 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * 12);
-    }
-  }
   .md\:ml-16 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * 16);
-    }
-  }
-  .md\:ml-64 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * 64);
-    }
-  }
-  .md\:ml-72 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * 72);
     }
   }
   .md\:ml-80 {
@@ -1890,6 +1864,31 @@ html.dark body {
 }
 .loading-dot:nth-child(3) {
   animation-delay: 0.3s;
+}
+.mobile-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  z-index: 50;
+}
+.mobile-menu-popup {
+  position: fixed;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 320px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+.dark .mobile-menu-popup {
+  background-color: var(--color-background-dark);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 @keyframes spin {
   to {
