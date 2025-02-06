@@ -1,0 +1,151 @@
+.button {
+	@apply px-6 py-2 rounded-md font-normal cursor-pointer shadow-md text-base tracking-wide;
+}
+
+.button:disabled {
+	@apply cursor-not-allowed opacity-50;
+}
+
+.button-sm {
+	@apply px-6 py-1.5 text-sm;
+}
+
+.button-lg {
+	@apply px-8 py-2.5 text-lg;
+}
+
+.button-block {
+	@apply w-full;
+}
+
+.button-rounded {
+	@apply rounded-full;
+}
+
+.button-primary {
+	@apply bg-primary dark:bg-primary-dark text-slate-100 hover:bg-primary/90 hover:dark:bg-primary-dark/90 focus:bg-primary/90 focus:dark:bg-primary-dark/90 active:bg-primary/90 active:dark:bg-primary-dark/90 active:outline-1 active:outline-primary/70 dark:active:outline-primary-dark/60;
+}
+
+.button-primary-outline {
+	@apply border-2 border-primary dark:border-primary-dark text-primary dark:text-primary-dark hover:bg-primary dark:hover:bg-primary-dark hover:text-slate-100 focus:bg-primary dark:focus:bg-primary-dark focus:text-slate-100 active:bg-primary dark:active:bg-primary-dark active:text-slate-100 active:outline-1 active:outline-primary/70 dark:active:outline-primary-dark/60;
+}
+
+.button-primary-soft {
+	@apply bg-primary/10 dark:bg-primary-dark/10 text-primary dark:text-primary-dark hover:bg-primary/20 dark:hover:bg-primary-dark/20 focus:bg-primary/20 dark:focus:bg-primary-dark/20 active:bg-primary/20 dark:active:bg-primary-dark/20 active:outline-1 active:outline-primary/70 dark:active:outline-primary-dark/60;
+}
+
+.button-primary-flat {
+	@apply text-primary hover:text-slate-100 dark:text-primary-dark hover:bg-primary dark:hover:bg-primary-dark focus:bg-primary dark:focus:bg-primary-dark active:bg-primary dark:active:bg-primary-dark active:outline-1 active:outline-primary/70 dark:active:outline-primary-dark/60;
+}
+
+.button-secondary {
+	@apply bg-secondary dark:bg-secondary-dark text-slate-100 hover:bg-secondary/90 hover:dark:bg-secondary-dark/90 focus:bg-secondary/90 focus:dark:bg-secondary-dark/90 active:bg-secondary/90 active:dark:bg-secondary-dark/90 active:outline-1 active:outline-secondary/70 dark:active:outline-secondary-dark/60;
+}
+
+.button-secondary-outline {
+	@apply border-2 border-secondary dark:border-secondary-dark text-secondary dark:text-secondary-dark hover:bg-secondary dark:hover:bg-secondary-dark hover:text-slate-100 focus:bg-secondary dark:focus:bg-secondary-dark focus:text-slate-100 active:bg-secondary dark:active:bg-secondary-dark active:text-slate-100 active:outline-1 active:outline-secondary/70 dark:active:outline-secondary-dark/60;
+}
+
+.button-secondary-soft {
+	@apply bg-secondary/10 dark:bg-secondary-dark/10 text-secondary dark:text-secondary-dark hover:bg-secondary/20 dark:hover:bg-secondary-dark/20 focus:bg-secondary/20 dark:focus:bg-secondary-dark/20 active:bg-secondary/20 dark:active:bg-secondary-dark/20 active:outline-1 active:outline-secondary/70 dark:active:outline-secondary-dark/60;
+}
+
+.button-secondary-flat {
+	@apply text-secondary hover:text-slate-100 dark:text-secondary-dark hover:bg-secondary dark:hover:bg-secondary-dark focus:bg-secondary dark:focus:bg-secondary-dark active:bg-secondary dark:active:bg-secondary-dark active:outline-1 active:outline-secondary/70 dark:active:outline-secondary-dark/60;
+}
+
+.button-warning {
+	@apply bg-warning dark:bg-warning-dark text-slate-100 hover:bg-warning/90 hover:dark:bg-warning-dark/90 focus:bg-warning/90 focus:dark:bg-warning-dark/90 active:bg-warning/90 active:dark:bg-warning-dark/90 active:outline-1 active:outline-warning/70 dark:active:outline-warning-dark/60;
+}
+
+.button-warning-outline {
+	@apply border-2 border-warning dark:border-warning-dark text-warning dark:text-warning-dark hover:bg-warning dark:hover:bg-warning-dark hover:text-slate-100 focus:bg-warning dark:focus:bg-warning-dark focus:text-slate-100 active:bg-warning dark:active:bg-warning-dark active:text-slate-100 active:outline-1 active:outline-warning/70 dark:active:outline-warning-dark/60;
+}
+
+.button-warning-soft {
+	@apply bg-warning/10 dark:bg-warning-dark/10 text-warning dark:text-warning-dark hover:bg-warning/20 dark:hover:bg-warning-dark/20 focus:bg-warning/20 dark:focus:bg-warning-dark/20 active:bg-warning/20 dark:active:bg-warning-dark/20 active:outline-1 active:outline-warning/70 dark:active:outline-warning-dark/60;
+}
+
+.button-warning-flat {
+	@apply text-warning hover:text-slate-100 dark:text-warning-dark hover:bg-warning dark:hover:bg-warning-dark focus:bg-warning dark:focus:bg-warning-dark active:bg-warning dark:active:bg-warning-dark active:outline-1 active:outline-warning/70 dark:active:outline-warning-dark/60;
+}
+
+.button-success {
+	@apply bg-success dark:bg-success-dark text-slate-100 hover:bg-success/90 hover:dark:bg-success-dark/90 focus:bg-success/90 focus:dark:bg-success-dark/90 active:bg-success/90 active:dark:bg-success-dark/90 active:outline-1 active:outline-success/70 dark:active:outline-success-dark/60;
+}
+
+.button-success-outline {
+	@apply border-2 border-success dark:border-success-dark text-success dark:text-success-dark hover:bg-success dark:hover:bg-success-dark hover:text-slate-100 focus:bg-success dark:focus:bg-success-dark focus:text-slate-100 active:bg-success dark:active:bg-success-dark active:text-slate-100 active:outline-1 active:outline-success/70 dark:active:outline-success-dark/60;
+}
+
+.button-success-soft {
+	@apply bg-success/10 dark:bg-success-dark/10 text-success dark:text-success-dark hover:bg-success/20 dark:hover:bg-success-dark/20 focus:bg-success/20 dark:focus:bg-success-dark/20 active:bg-success/20 dark:active:bg-success-dark/20 active:outline-1 active:outline-success/70 dark:active:outline-success-dark/60;
+}
+
+.button-success-flat {
+	@apply text-success hover:text-slate-100 dark:text-success-dark hover:bg-success dark:hover:bg-success-dark focus:bg-success dark:focus:bg-success-dark active:bg-success dark:active:bg-success-dark active:outline-1 active:outline-success/70 dark:active:outline-success-dark/60;
+}
+
+.button-danger {
+	@apply bg-danger dark:bg-danger-dark text-slate-100 hover:bg-danger/90 hover:dark:bg-danger-dark/90 focus:bg-danger/90 focus:dark:bg-danger-dark/90 active:bg-danger/90 active:dark:bg-danger-dark/90 active:outline-1 active:outline-danger/70 dark:active:outline-danger-dark/60;
+}
+
+.button-danger-outline {
+	@apply border-2 border-danger dark:border-danger-dark text-danger dark:text-danger-dark hover:bg-danger dark:hover:bg-danger-dark hover:text-slate-100 focus:bg-danger dark:focus:bg-danger-dark focus:text-slate-100 active:bg-danger dark:active:bg-danger-dark active:text-slate-100 active:outline-1 active:outline-danger/70 dark:active:outline-danger-dark/60;
+}
+
+.button-danger-soft {
+	@apply bg-danger/10 dark:bg-danger-dark/10 text-danger dark:text-danger-dark hover:bg-danger/20 dark:hover:bg-danger-dark/20 focus:bg-danger/20 dark:focus:bg-danger-dark/20 active:bg-danger/20 dark:active:bg-danger-dark/20 active:outline-1 active:outline-danger/70 dark:active:outline-danger-dark/60;
+}
+
+.button-danger-flat {
+	@apply text-danger hover:text-slate-100 dark:text-danger-dark hover:bg-danger dark:hover:bg-danger-dark focus:bg-danger dark:focus:bg-danger-dark active:bg-danger dark:active:bg-danger-dark active:outline-1 active:outline-danger/70 dark:active:outline-danger-dark/60;
+}
+
+.button-info {
+	@apply bg-info dark:bg-info-dark text-slate-100 hover:bg-info/90 hover:dark:bg-info-dark/90 focus:bg-info/90 focus:dark:bg-info-dark/90 active:bg-info/90 active:dark:bg-info-dark/90 active:outline-1 active:outline-info/70 dark:active:outline-info-dark/60;
+}
+
+.button-info-outline {
+	@apply border-2 border-info dark:border-info-dark text-info dark:text-info-dark hover:bg-info dark:hover:bg-info-dark hover:text-slate-100 focus:bg-info dark:focus:bg-info-dark focus:text-slate-100 active:bg-info dark:active:bg-info-dark active:text-slate-100 active:outline-1 active:outline-info/70 dark:active:outline-info-dark/60;
+}
+
+.button-info-soft {
+	@apply bg-info/10 dark:bg-info-dark/10 text-info dark:text-info-dark hover:bg-info/20 dark:hover:bg-info-dark/20 focus:bg-info/20 dark:focus:bg-info-dark/20 active:bg-info/20 dark:active:bg-info-dark/20 active:outline-1 active:outline-info/70 dark:active:outline-info-dark/60;
+}
+
+.button-info-flat {
+	@apply text-info hover:text-slate-100 dark:text-info-dark hover:bg-info dark:hover:bg-info-dark focus:bg-info dark:focus:bg-info-dark active:bg-info dark:active:bg-info-dark active:outline-1 active:outline-info/70 dark:active:outline-info-dark/60;
+}
+
+.button-foreground {
+	@apply bg-foreground dark:bg-foreground-dark text-slate-100 hover:bg-foreground/90 hover:dark:bg-foreground-dark/90 focus:bg-foreground/90 focus:dark:bg-foreground-dark/90 active:bg-foreground/90 active:dark:bg-foreground-dark/90 active:outline-1 active:outline-foreground/70 dark:active:outline-foreground-dark/60;
+}
+
+.button-foreground-outline {
+	@apply border-2 border-foreground dark:border-foreground-dark text-foreground dark:text-foreground-dark hover:bg-foreground dark:hover:bg-foreground-dark hover:text-slate-100 focus:bg-foreground dark:focus:bg-foreground-dark focus:text-slate-100 active:bg-foreground dark:active:bg-foreground-dark active:text-slate-100 active:outline-1 active:outline-foreground/70 dark:active:outline-foreground-dark/60;
+}
+
+.button-foreground-soft {
+	@apply bg-foreground/10 dark:bg-foreground-dark/10 text-foreground dark:text-foreground-dark hover:bg-foreground/20 dark:hover:bg-foreground-dark/20 focus:bg-foreground/20 dark:focus:bg-foreground-dark/20 active:bg-foreground/20 dark:active:bg-foreground-dark/20 active:outline-1 active:outline-foreground/70 dark:active:outline-foreground-dark/60;
+}
+
+.button-foreground-flat {
+	@apply text-foreground hover:text-slate-100 dark:text-foreground-dark hover:bg-foreground dark:hover:bg-foreground-dark focus:bg-foreground dark:focus:bg-foreground-dark active:bg-foreground dark:active:bg-foreground-dark active:outline-1 active:outline-foreground/70 dark:active:outline-foreground-dark/60;
+}
+
+.button-background {
+	@apply bg-background dark:bg-background-dark text-slate-100 hover:bg-background/90 hover:dark:bg-background-dark/90 focus:bg-background/90 focus:dark:bg-background-dark/90 active:bg-background/90 active:dark:bg-background-dark/90 active:outline-1 active:outline-background/70 dark:active:outline-background-dark/60;
+}
+
+.button-background-outline {
+	@apply border-2 border-background dark:border-background-dark text-background dark:text-background-dark hover:bg-background dark:hover:bg-background-dark hover:text-slate-100 focus:bg-background dark:focus:bg-background-dark focus:text-slate-100 active:bg-background dark:active:bg-background-dark active:text-slate-100 active:outline-1 active:outline-background/70 dark:active:outline-background-dark/60;
+}
+
+.button-background-soft {
+	@apply bg-background/10 dark:bg-background-dark/10 text-background dark:text-background-dark hover:bg-background/20 dark:hover:bg-background-dark/20 focus:bg-background/20 dark:focus:bg-background-dark/20 active:bg-background/20 dark:active:bg-background-dark/20 active:outline-1 active:outline-background/70 dark:active:outline-background-dark/60;
+}
+
+.button-background-flat {
+	@apply text-background hover:text-slate-100 dark:text-background-dark hover:bg-background dark:hover:bg-background-dark focus:bg-background dark:focus:bg-background-dark active:bg-background dark:active:bg-background-dark active:outline-1 active:outline-background/70 dark:active:outline-background-dark/60;
+}
