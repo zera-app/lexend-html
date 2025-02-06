@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Lexend Dashboard</title>
-		<link rel="stylesheet" defer href="/dist/css/app.css" />
+		<link rel="stylesheet" defer href="../dist/css/app.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -284,7 +284,9 @@
 										class="block px-4 py-2 text-sm"
 										>Settings</a
 									>
-									<a href="/src/index.html" class="block px-4 py-2 text-sm"
+									<a
+										href="/src/index.html"
+										class="block px-4 py-2 text-sm"
 										>Logout</a
 									>
 								</div>
@@ -298,7 +300,7 @@
 			<!-- Sidebar -->
 			<div class="flex mt-16 fixed top-0 left-0 isolated z-10 h-full">
 				<!-- Icon Sidebar - Hidden on mobile, visible on tablet and up -->
-				<div class="sidebar-icon z-20">
+				<div class="sidebar-icon">
 					<div>
 						<div class="inline-flex h-16 w-16 items-center justify-center">
 							<a
@@ -497,7 +499,7 @@
 					<div
 						class="sticky inset-x-0 bottom-0 border-t border-gray-100 dark:border-gray-700 bg-foreground dark:bg-background-dark p-2"
 					>
-						<!-- Logout -->
+					<!-- Logout -->
 						<div class="relative" x-data="{ tooltip: false }">
 							<form action="#">
 								<button
@@ -525,7 +527,7 @@
 								<span
 									x-show="tooltip"
 									x-transition
-									class="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-max bg-slate-800 text-white rounded py-1 px-2 whitespace-nowrap z-[100] font-normal"
+									class="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-max bg-slate-800 text-white rounded py-1 px-2 whitespace-nowrap z-[100] font-normal "
 								>
 									Logout
 								</span>
@@ -536,14 +538,13 @@
 				<!-- Icon Sidebar - Hidden on mobile, visible on tablet and up -->
 
 				<!-- Expanded Sidebar - Mobile overlay, normal sidebar on larger screens -->
-				<div class="relative z-10">
+				<div class="relative">
 					<div
-						x-cloak
 						x-show="sidebarOpen"
-						x-transition:enter="transform transition duration-300 ease-in-out"
+						x-transition:enter="transform transition-transform duration-200 ease-out"
 						x-transition:enter-start="translate-x-[-100%]"
 						x-transition:enter-end="translate-x-0"
-						x-transition:leave="transform transition duration-300 ease-in-out"
+						x-transition:leave="transform transition-transform duration-200 ease-in"
 						x-transition:leave-start="translate-x-0"
 						x-transition:leave-end="translate-x-[-100%]"
 						class="sidebar-layout overflow-y-auto max-h-screen"
@@ -552,25 +553,15 @@
 							<ul class="space-y-1" x-data="{ selected: null }">
 								<li>
 									<a
-										href="/src/dashboard/dashboard.html"
+										href="#"
 										class="sidebar-link sidebar-link-active"
-										>Dashboard</a
-									>
-								</li>
-								<li>
-									<a href="/src/dashboard/dashboard.html" class="sidebar-link"
-										>Dashboard</a
-									>
-								</li>
-								<li>
-									<a href="/src/dashboard/dashboard.html" class="sidebar-link"
-										>Dashboard</a
+										>Example Sidebar Content</a
 									>
 								</li>
 
 								<li x-data="{ open: false, subSelected: null }">
 									<button @click="open = !open" class="sidebar-dropdown-button">
-										<span class="text-sm font-medium">Element</span>
+										<span class="text-sm font-medium">Sidebar Dropdown</span>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											class="sidebar-dropdown-icon"
@@ -588,192 +579,13 @@
 
 									<ul x-show="open" x-transition class="sidebar-dropdown">
 										<li>
-											<a
-												href="/src/elements/index.html"
-												class="sidebar-nested-link"
-												>Button</a
+											<a href="" class="sidebar-nested-link"
+												>Sidebar</a
 											>
 										</li>
 										<li>
-											<a
-												href="/src/elements/input.html"
-												class="sidebar-nested-link"
-												>Input</a
-											>
-										</li>
-									</ul>
-								</li>
-
-								<li x-data="{ open: false, subSelected: null }">
-									<button @click="open = !open" class="sidebar-dropdown-button">
-										<span class="text-sm font-medium">Component</span>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											class="sidebar-dropdown-icon"
-											:class="{ 'open': open }"
-											viewBox="0 0 20 20"
-											fill="currentColor"
-										>
-											<path
-												fill-rule="evenodd"
-												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-												clip-rule="evenodd"
-											/>
-										</svg>
-									</button>
-
-									<ul x-show="open" x-transition class="sidebar-dropdown">
-										<li>
-											<a
-												href="/src/components/accordion.html"
-												class="sidebar-nested-link"
-												>Accordion</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/alert.html"
-												class="sidebar-nested-link"
-												>Alert</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/badge.html"
-												class="sidebar-nested-link"
-												>Badge</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/breadcrumb.html"
-												class="sidebar-nested-link"
-												>Breadcrumb</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/dropdown.html"
-												class="sidebar-nested-link"
-												>Dropdown</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/card.html"
-												class="sidebar-nested-link"
-												>Card</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/table.html"
-												class="sidebar-nested-link"
-												>Table</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/collapse.html"
-												class="sidebar-nested-link"
-												>Collapse</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/drawer.html"
-												class="sidebar-nested-link"
-												>Drawer</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/menu-list.html"
-												class="sidebar-nested-link"
-												>Menu List</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/modal.html"
-												class="sidebar-nested-link"
-												>Modal</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/pagination.html"
-												class="sidebar-nested-link"
-												>Pagination</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/popover.html"
-												class="sidebar-nested-link"
-												>Popover</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/tab.html"
-												class="sidebar-nested-link"
-												>Tab</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/components/tooltip.html"
-												class="sidebar-nested-link"
-												>Tooltip</a
-											>
-										</li>
-									</ul>
-								</li>
-								<li x-data="{ open: false }">
-									<button @click="open = !open" class="sidebar-dropdown-button">
-										<span class="text-sm font-medium">Pages</span>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											class="sidebar-dropdown-icon"
-											:class="{ 'open': open }"
-											viewBox="0 0 20 20"
-											fill="currentColor"
-										>
-											<path
-												fill-rule="evenodd"
-												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-												clip-rule="evenodd"
-											/>
-										</svg>
-									</button>
-									<ul x-show="open" x-transition class="sidebar-dropdown">
-										<li>
-											<a
-												href="/src/pages/login.html"
-												class="sidebar-nested-link"
-												>Login</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/pages/signup.html"
-												class="sidebar-nested-link"
-												>Signup</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/pages/forgot-password.html"
-												class="sidebar-nested-link"
-												>Forgot Password</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/pages/reset-password.html"
-												class="sidebar-nested-link"
-												>Reset Password</a
+											<a href="#" class="sidebar-nested-link"
+												>Sidebar</a
 											>
 										</li>
 									</ul>
@@ -808,13 +620,13 @@
                     'ml-0': true
                 }"
 			>
-				<!-- <div class="card card-body min-h-[200vh]">
+				<div class="card card-body min-h-[200vh]">
 					<h1
 						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
 					>
 						Dashboard
 					</h1>
-				</div> -->
+				</div>
 			</main>
 		</div>
 
@@ -994,7 +806,7 @@
 							xmlns="http://www.w3.org/2000/svg"
 							class="h-5 w-5"
 							fill="none"
-							viewBox="0 0 24 24"
+							viewBox="0 0 24h24 24"
 							stroke="currentColor"
 						>
 							<path

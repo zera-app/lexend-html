@@ -3,8 +3,13 @@
 	@apply relative flex justify-center rounded px-2 py-1.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200;
 }
 
+/* Modified Sidebar Link Styles using Tailwind classes */
 .sidebar-link {
-	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary dark:hover:text-primary-dark;
+	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 transition-transform transition-colors duration-300 ease-in-out;
+}
+
+.sidebar-link:hover {
+	@apply translate-x-[5px] text-primary dark:text-primary-dark font-normal tracking-wider;
 }
 
 .sidebar-dropdown-button {
@@ -33,9 +38,12 @@
 	@apply flex w-full items-center justify-between rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary dark:hover:text-primary-dark;
 }
 
-/* Sidebar Link Utilities */
 .sidebar-link {
-	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary dark:hover:text-primary-dark;
+	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 transition-transform duration-300 ease-in-out;
+}
+
+.sidebar-link:hover {
+	@apply translate-x-[5px] text-primary dark:text-primary-dark font-normal tracking-wider;
 }
 
 .sidebar-link-active,
@@ -45,15 +53,21 @@
 }
 
 .sidebar-nested-link {
-	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary dark:hover:text-primary-dark;
+	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 transition-transform transition-colors duration-300 ease-in-out;
+}
+.sidebar-nested-link:hover {
+	@apply translate-x-[5px] text-primary dark:text-primary-dark font-normal tracking-wider;
 }
 
 .sidebar-dropdown-link {
-	@apply flex w-full items-center justify-between rounded-sm px-4 py-2 text-sm font-medium text-slate-500 dark:text-slate-400 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary-dark/20 dark:hover:text-primary-dark;
+	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 transition-transform transition-colors duration-300 ease-in-out;
+}
+.sidebar-dropdown-link:hover {
+	@apply translate-x-[5px] text-primary dark:text-primary-dark font-normal tracking-wider;
 }
 
 .sidebar-dropdown-link-active {
-	@apply bg-primary/10 dark:bg-primary-dark/20 text-primary dark:text-primary-dark font-semibold;
+	@apply block rounded-lg px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 transition-transform transition-colors duration-300 ease-in-out;
 }
 
 /* Navigation Components */
@@ -71,35 +85,32 @@
 	width: 8px;
 }
 .sidebar-layout::-webkit-scrollbar-track {
-	background: #edf2f7; /* soft light track */
+	@apply bg-slate-100 dark:bg-slate-800;
 }
 .sidebar-layout::-webkit-scrollbar-thumb {
-	background: #a0aec0; /* soft light thumb */
-	border-radius: 4px;
+	@apply bg-slate-200 dark:bg-slate-700 rounded-md;
 }
 .sidebar-layout::-webkit-scrollbar-thumb:hover {
-	background: #718096; /* soft hover */
+	@apply bg-slate-300 dark:bg-slate-600;
 }
 .dark .sidebar-layout::-webkit-scrollbar-track {
-	background: #4a5568; /* soft dark track */
+	@apply bg-slate-900;
 }
 .dark .sidebar-layout::-webkit-scrollbar-thumb {
-	background: #718096; /* soft dark thumb */
+	@apply bg-slate-800;
 }
 .dark .sidebar-layout::-webkit-scrollbar-thumb:hover {
-	background: #2d3748; /* dark hover */
+	@apply bg-slate-700;
 }
 
 .sidebar-icon {
 	@apply hidden md:flex h-[calc(100vh-4rem)] w-16 flex-shrink-0 flex-col justify-between border-e bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800;
 }
 
-/* Backdrop */
 .sidebar-backdrop {
 	@apply fixed inset-0 bg-gray-600/30 backdrop-blur-sm z-30 md:hidden;
 }
 
-/* Sidebar Footer */
 .sidebar-footer {
 	@apply sticky inset-x-0 bottom-0 border-t border-purple-200 dark:border-purple-900/30 bg-white dark:bg-slate-900 p-2;
 }
