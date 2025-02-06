@@ -13,13 +13,6 @@
 			rel="stylesheet"
 		/>
 
-		<!-- Alpine Plugins -->
-		<script
-			defer
-			src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
-		></script>
-
-		<!-- Alpine Core -->
 		<script
 			defer
 			src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
@@ -305,7 +298,7 @@
 			<!-- Sidebar -->
 			<div class="flex mt-16 fixed top-0 left-0 isolated z-10 h-full">
 				<!-- Icon Sidebar - Hidden on mobile, visible on tablet and up -->
-				<div class="sidebar-icon z-20">
+				<div class="sidebar-icon">
 					<div>
 						<div class="inline-flex h-16 w-16 items-center justify-center">
 							<a
@@ -327,7 +320,7 @@
 									stroke-linejoin="round"
 									class="icon icon-tabler icons-tabler-outline icon-tabler-settings"
 								>
-									<path stroke="none" d="M0 0h24h24H0z" fill="none" />
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 									<path
 										d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
 									/>
@@ -543,14 +536,13 @@
 				<!-- Icon Sidebar - Hidden on mobile, visible on tablet and up -->
 
 				<!-- Expanded Sidebar - Mobile overlay, normal sidebar on larger screens -->
-				<div class="relative z-10">
+				<div class="relative">
 					<div
-						x-cloak
 						x-show="sidebarOpen"
-						x-transition:enter="transform transition duration-300 ease-in-out"
+						x-transition:enter="transform transition-transform duration-200 ease-out"
 						x-transition:enter-start="translate-x-[-100%]"
 						x-transition:enter-end="translate-x-0"
-						x-transition:leave="transform transition duration-300 ease-in-out"
+						x-transition:leave="transform transition-transform duration-200 ease-in"
 						x-transition:leave-start="translate-x-0"
 						x-transition:leave-end="translate-x-[-100%]"
 						class="sidebar-layout overflow-y-auto max-h-screen"
@@ -558,18 +550,14 @@
 						<div class="px-4 py-6">
 							<ul class="space-y-1" x-data="{ selected: null }">
 								<li>
-									<a href="/src/elements/index.html" class="sidebar-link"
-										>Element</a
+									<a href="#" class="sidebar-link sidebar-link-active"
+										>Sample</a
 									>
 								</li>
-								<li>
-									<a href="/src/elements/button.html" class="sidebar-link"
-										>Button</a
-									>
-								</li>
-								<li x-data="{ open: true }">
+
+								<li x-data="{ open: false, subSelected: null }">
 									<button @click="open = !open" class="sidebar-dropdown-button">
-										<span class="text-sm font-medium">Input</span>
+										<span class="text-sm font-medium">Sample Dropdown</span>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											class="sidebar-dropdown-icon"
@@ -579,67 +567,18 @@
 										>
 											<path
 												fill-rule="evenodd"
-												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
 												clip-rule="evenodd"
 											/>
 										</svg>
 									</button>
-									<ul x-show="open" x-collapse class="sidebar-dropdown">
+
+									<ul x-show="open" x-transition class="sidebar-dropdown">
 										<li>
-											<a
-												href="/src/elements/forms/input.html"
-												class="sidebar-nested-link"
-												>Input</a
-											>
+											<a href="" class="sidebar-nested-link">Sidebar</a>
 										</li>
 										<li>
-											<a
-												href="/src/elements/forms/textarea.html"
-												class="sidebar-nested-link"
-												>Textarea</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/elements/forms/select.html"
-												class="sidebar-nested-link"
-												>Select</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/elements/forms/date-input.html"
-												class="sidebar-nested-link"
-												>Date Input</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/elements/forms/file.html"
-												class="sidebar-nested-link"
-												>File</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/elements/forms/radio.html"
-												class="sidebar-nested-link sidebar-nested-link-active"
-												>Radio</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/elements/forms/switch.html"
-												class="sidebar-nested-link"
-												>Switch</a
-											>
-										</li>
-										<li>
-											<a
-												href="/src/elements/forms/checkbox.html"
-												class="sidebar-nested-link"
-												>Checkbox</a
-											>
+											<a href="#" class="sidebar-nested-link">Sidebar</a>
 										</li>
 									</ul>
 								</li>
@@ -673,13 +612,13 @@
                     'ml-0': true
                 }"
 			>
-				<!-- <div class="card card-body min-h-[200vh]">
+				<div class="card card-body min-h-[200vh]">
 					<h1
 						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
 					>
 						Dashboard
 					</h1>
-				</div> -->
+				</div>
 			</main>
 		</div>
 
@@ -859,7 +798,7 @@
 							xmlns="http://www.w3.org/2000/svg"
 							class="h-5 w-5"
 							fill="none"
-							viewBox="0 0 24 24"
+							viewBox="0 0 24h24 24"
 							stroke="currentColor"
 						>
 							<path
