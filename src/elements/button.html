@@ -444,7 +444,7 @@
 												stroke-linejoin="round"
 												class="icon icon-tabler icons-tabler-outline icon-tabler-components"
 											>
-												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path stroke="none" d="M0 0h24h24H0z" fill="none" />
 												<path d="M3 12l3 3l3 -3l-3 -3z" />
 												<path d="M15 12l3 3l3 -3l-3 -3z" />
 												<path d="M9 6l3 3l3 -3l-3 -3z" />
@@ -581,7 +581,7 @@
 										>
 											<path
 												fill-rule="evenodd"
-												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
 												clip-rule="evenodd"
 											/>
 										</svg>
@@ -668,13 +668,178 @@
                     'ml-0': true
                 }"
 			>
-				<!-- <div class="card card-body min-h-[200vh]">
-					<h1
-						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
-					>
-						Dashboard
-					</h1>
-				</div> -->
+				<div class="card">
+					<div class="card-header">
+						<h1>Basic Button</h1>
+					</div>
+					<div class="card-body">
+						<button class="button button-primary">Primary</button>
+						<button class="button button-secondary">Secondary</button>
+						<button class="button button-warning">Warning</button>
+						<button class="button button-success">Success</button>
+						<button class="button button-danger">Danger</button>
+						<button class="button button-info">Info</button>
+						<button class="button button-foreground">Foreground</button>
+						<button class="button button-background">Background</button>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h1>Round Button</h1>
+					</div>
+					<div class="card-body">
+						<button class="button button-primary button-rounded">
+							Primary
+						</button>
+						<button class="button button-secondary button-rounded">
+							Secondary
+						</button>
+						<button class="button button-warning button-rounded">
+							Warning
+						</button>
+						<button class="button button-success button-rounded">
+							Success
+						</button>
+						<button class="button button-danger button-rounded">Danger</button>
+						<button class="button button-info button-rounded">Info</button>
+						<button class="button button-foreground button-rounded">
+							Foreground
+						</button>
+						<button class="button button-background button-rounded">
+							Background
+						</button>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h1>Full Button</h1>
+					</div>
+					<div class="card-body">
+						<button class="button button-block button-primary my-2">
+							Primary
+						</button>
+						<button class="button button-block button-secondary my-2">
+							Secondary
+						</button>
+						<button class="button button-block button-warning my-2">
+							Warning
+						</button>
+						<button class="button button-block button-success my-2">
+							Success
+						</button>
+						<button class="button button-block button-danger my-2">
+							Danger
+						</button>
+						<button class="button button-block button-info my-2">Info</button>
+						<button class="button button-block button-foreground my-2">
+							Foreground
+						</button>
+						<button class="button button-block button-background my-2">
+							Background
+						</button>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h1>Outline Button</h1>
+					</div>
+					<div class="card-body">
+						<button class="button button-primary-outline">Primary</button>
+						<button class="button button-secondary-outline">Secondary</button>
+						<button class="button button-warning-outline">Warning</button>
+						<button class="button button-success-outline">Success</button>
+						<button class="button button-danger-outline">Danger</button>
+						<button class="button button-info-outline">Info</button>
+						<button class="button button-foreground-outline">Foreground</button>
+						<button class="button button-background-outline">Background</button>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h1>Button</h1>
+					</div>
+					<div class="card-body">
+						<button class="button button-primary-flat">Primary</button>
+						<button class="button button-secondary-flat">Secondary</button>
+						<button class="button button-warning-flat">Warning</button>
+						<button class="button button-success-flat">Success</button>
+						<button class="button button-danger-flat">Danger</button>
+						<button class="button button-info-flat">Info</button>
+						<button class="button button-foreground-flat">Foreground</button>
+						<button class="button button-background-flat">Background</button>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h1>Button Sizing</h1>
+					</div>
+					<div class="card-body">
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-primary">Primary</button>
+							<button class="button button-primary">Primary</button>
+							<button class="button button-lg button-primary">Primary</button>
+						</div>
+
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-secondary">
+								Secondary
+							</button>
+							<button class="button button-secondary">Secondary</button>
+							<button class="button button-lg button-secondary">
+								Secondary
+							</button>
+						</div>
+
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-warning">Warning</button>
+							<button class="button button-warning">Warning</button>
+							<button class="button button-lg button-warning">Warning</button>
+						</div>
+
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-success">Success</button>
+							<button class="button button-success">Success</button>
+							<button class="button button-lg button-success">Success</button>
+						</div>
+
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-danger">Danger</button>
+							<button class="button button-danger">Danger</button>
+							<button class="button button-lg button-danger">Danger</button>
+						</div>
+
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-info">Info</button>
+							<button class="button button-info">Info</button>
+							<button class="button button-lg button-info">Info</button>
+						</div>
+
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-foreground">
+								Foreground
+							</button>
+							<button class="button button-foreground">Foreground</button>
+							<button class="button button-lg button-foreground">
+								Foreground
+							</button>
+						</div>
+
+						<div class="gap-4 mt-4">
+							<button class="button button-sm button-background">
+								Background
+							</button>
+							<button class="button button-background">Background</button>
+							<button class="button button-lg button-background">
+								Background
+							</button>
+						</div>
+					</div>
+				</div>
 			</main>
 		</div>
 
