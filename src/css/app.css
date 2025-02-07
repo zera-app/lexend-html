@@ -25,7 +25,7 @@
 /* Base Styles */
 body {
 	@apply font-sans text-base bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100;
-	font-family: "Lexend", sans-serif;
+	font-family: "Fexend", sans-serif;
 }
 
 html.dark body {
