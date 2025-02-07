@@ -35,7 +35,7 @@
 }
 
 .button-primary-flat {
-	@apply text-primary hover:text-slate-100 dark:text-primary-dark hover:bg-primary dark:hover:bg-primary-dark focus:bg-primary dark:focus:bg-primary-dark active:bg-primary dark:active:bg-primary-dark active:outline-1 active:outline-primary/70 dark:active:outline-primary-dark/60;
+	@apply text-primary hover:text-slate-100 dark:text-primary-dark hover:bg-primary dark:hover:bg-primary-dark focus:bg-primary dark:focus:bg-primary-dark active:bg-primary dark:active:bg-primary-dark active:outline-1 active:outline-primary/70 dark:active:outline-primary-dark/60 active:text-white focus:text-white;
 }
 
 .button-secondary {
@@ -51,7 +51,7 @@
 }
 
 .button-secondary-flat {
-	@apply text-secondary hover:text-slate-100 dark:text-secondary-dark hover:bg-secondary dark:hover:bg-secondary-dark focus:bg-secondary dark:focus:bg-secondary-dark active:bg-secondary dark:active:bg-secondary-dark active:outline-1 active:outline-secondary/70 dark:active:outline-secondary-dark/60;
+	@apply text-secondary hover:text-slate-100 dark:text-secondary-dark hover:bg-secondary dark:hover:bg-secondary-dark focus:bg-secondary dark:focus:bg-secondary-dark active:bg-secondary dark:active:bg-secondary-dark active:outline-1 active:outline-secondary/70 dark:active:outline-secondary-dark/60 active:text-white focus:text-white;
 }
 
 .button-warning {
@@ -67,7 +67,7 @@
 }
 
 .button-warning-flat {
-	@apply text-warning hover:text-slate-100 dark:text-warning-dark hover:bg-warning dark:hover:bg-warning-dark focus:bg-warning dark:focus:bg-warning-dark active:bg-warning dark:active:bg-warning-dark active:outline-1 active:outline-warning/70 dark:active:outline-warning-dark/60;
+	@apply text-warning hover:text-slate-100 dark:text-warning-dark hover:bg-warning dark:hover:bg-warning-dark focus:bg-warning dark:focus:bg-warning-dark active:bg-warning dark:active:bg-warning-dark active:outline-1 active:outline-warning/70 dark:active:outline-warning-dark/60 active:text-white focus:text-white;
 }
 
 .button-success {
@@ -83,7 +83,7 @@
 }
 
 .button-success-flat {
-	@apply text-success hover:text-slate-100 dark:text-success-dark hover:bg-success dark:hover:bg-success-dark focus:bg-success dark:focus:bg-success-dark active:bg-success dark:active:bg-success-dark active:outline-1 active:outline-success/70 dark:active:outline-success-dark/60;
+	@apply text-success hover:text-slate-100 dark:text-success-dark hover:bg-success dark:hover:bg-success-dark focus:bg-success dark:focus:bg-success-dark active:bg-success dark:active:bg-success-dark active:outline-1 active:outline-success/70 dark:active:outline-success-dark/60 active:text-white focus:text-white;
 }
 
 .button-danger {
@@ -99,7 +99,7 @@
 }
 
 .button-danger-flat {
-	@apply text-danger hover:text-slate-100 dark:text-danger-dark hover:bg-danger dark:hover:bg-danger-dark focus:bg-danger dark:focus:bg-danger-dark active:bg-danger dark:active:bg-danger-dark active:outline-1 active:outline-danger/70 dark:active:outline-danger-dark/60;
+	@apply text-danger hover:text-slate-100 dark:text-danger-dark hover:bg-danger dark:hover:bg-danger-dark focus:bg-danger dark:focus:bg-danger-dark active:bg-danger dark:active:bg-danger-dark active:outline-1 active:outline-danger/70 dark:active:outline-danger-dark/60 active:text-white focus:text-white;
 }
 
 .button-info {
@@ -115,7 +115,7 @@
 }
 
 .button-info-flat {
-	@apply text-info hover:text-slate-100 dark:text-info-dark hover:bg-info dark:hover:bg-info-dark focus:bg-info dark:focus:bg-info-dark active:bg-info dark:active:bg-info-dark active:outline-1 active:outline-info/70 dark:active:outline-info-dark/60;
+	@apply text-info hover:text-slate-100 dark:text-info-dark hover:bg-info dark:hover:bg-info-dark focus:bg-info dark:focus:bg-info-dark active:bg-info dark:active:bg-info-dark active:outline-1 active:outline-info/70 dark:active:outline-info-dark/60 active:text-white focus:text-white;
 }
 
 .button-foreground {

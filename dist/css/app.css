@@ -1939,8 +1939,14 @@
   &:focus {
     background-color: var(--color-primary);
   }
+  &:focus {
+    color: var(--color-white);
+  }
   &:active {
     background-color: var(--color-primary);
+  }
+  &:active {
+    color: var(--color-white);
   }
   &:active {
     outline-style: var(--tw-outline-style);
@@ -2150,8 +2156,14 @@
   &:focus {
     background-color: var(--color-secondary);
   }
+  &:focus {
+    color: var(--color-white);
+  }
   &:active {
     background-color: var(--color-secondary);
+  }
+  &:active {
+    color: var(--color-white);
   }
   &:active {
     outline-style: var(--tw-outline-style);
@@ -2361,8 +2373,14 @@
   &:focus {
     background-color: var(--color-warning);
   }
+  &:focus {
+    color: var(--color-white);
+  }
   &:active {
     background-color: var(--color-warning);
+  }
+  &:active {
+    color: var(--color-white);
   }
   &:active {
     outline-style: var(--tw-outline-style);
@@ -2572,8 +2590,14 @@
   &:focus {
     background-color: var(--color-success);
   }
+  &:focus {
+    color: var(--color-white);
+  }
   &:active {
     background-color: var(--color-success);
+  }
+  &:active {
+    color: var(--color-white);
   }
   &:active {
     outline-style: var(--tw-outline-style);
@@ -2783,8 +2807,14 @@
   &:focus {
     background-color: var(--color-danger);
   }
+  &:focus {
+    color: var(--color-white);
+  }
   &:active {
     background-color: var(--color-danger);
+  }
+  &:active {
+    color: var(--color-white);
   }
   &:active {
     outline-style: var(--tw-outline-style);
@@ -2994,8 +3024,14 @@
   &:focus {
     background-color: var(--color-info);
   }
+  &:focus {
+    color: var(--color-white);
+  }
   &:active {
     background-color: var(--color-info);
+  }
+  &:active {
+    color: var(--color-white);
   }
   &:active {
     outline-style: var(--tw-outline-style);
@@ -3574,28 +3610,37 @@ html.dark body {
 }
 .mobile-menu {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.5rem;
+  right: calc(var(--spacing) * 0);
+  bottom: calc(var(--spacing) * 0);
+  left: calc(var(--spacing) * 0);
+  z-index: 50;
   display: flex;
   justify-content: center;
-  z-index: 50;
+  padding: calc(var(--spacing) * 2);
 }
 .mobile-menu-popup {
   position: fixed;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 320px;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  bottom: 60px;
+  left: calc(1/2 * 100%);
   z-index: 50;
-}
-.dark .mobile-menu-popup {
-  background-color: var(--color-background-dark);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  width: calc(11/12 * 100%);
+  max-width: calc(var(--spacing) * 320);
+  --tw-translate-x: calc(50% * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-background);
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:where(.dark, .dark *) {
+    background-color: var(--color-background-dark);
+  }
 }
 @keyframes spin {
   to {
