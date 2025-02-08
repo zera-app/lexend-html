@@ -1,0 +1,36 @@
+label.label-checkbox {
+	@apply flex 
+    cursor-pointer 
+    items-center 
+    gap-2;
+}
+
+label.label-checkbox-divider {
+	@apply flex cursor-pointer items-start gap-4 py-4;
+}
+
+label.label-checkbox-divider p {
+	@apply text-sm font-normal text-slate-900 dark:text-slate-100;
+}
+
+label.label-checkbox-divider span {
+	@apply text-xs font-normal text-slate-500 dark:text-slate-400;
+}
+
+input[type="checkbox"] {
+	@apply relative 
+    size-4 
+    rounded-md 
+    bg-foreground 
+    dark:bg-foreground-dark 
+    text-primary 
+    dark:text-primary-dark 
+    focus:outline-none
+    focus:border-0
+    active:border-0;
+}
+
+input[type="checkbox"]:checked {
+	@apply bg-primary 
+    dark:bg-primary-dark;
+}
