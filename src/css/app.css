@@ -20,6 +20,9 @@
 	--color-foreground-dark: #0f172a;
 	--color-background: #f1f5f9;
 	--color-background-dark: #020617;
+	--color-dark: #020618;
+	--color-dark-secondary: #020618;
+	--color-white-dark: #f1f5f9;
 }
 
 /* Base Styles */
@@ -37,9 +40,9 @@ html.dark body {
 }
 
 /* Transitions */
-.transition-default {
+/* .transition-default {
 	@apply transition-all duration-200;
-}
+} */
 
 /* Group Hover Effects */
 .group:hover span {
@@ -82,28 +85,9 @@ html.dark body {
 
 /* Mobile Menu Popup Styles */
 .mobile-menu {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 0.5rem;
-	display: flex;
-	justify-content: center;
-	z-index: 50;
+	@apply fixed bottom-0 left-0 right-0 p-2 flex justify-center z-50;
 }
 
 .mobile-menu-popup {
-	position: fixed;
-	bottom: 5rem;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 90%;
-	max-width: 320px;
-	border-radius: 0.5rem;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	z-index: 50;
-}
-.dark .mobile-menu-popup {
-	background-color: var(--color-background-dark);
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+	@apply bg-background dark:bg-background-dark fixed bottom-[60px] -translate-x-[50%] left-1/2 w-11/12 max-w-320 rounded-lg shadow-md z-50 transition-transform duration-200 ease-in-out;
 }

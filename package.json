@@ -1,18 +1,18 @@
 {
-  "name": "lexend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "npx tailwindcss -i ./src/css/app.css -o ./dist/css/app.css --watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@tailwindcss/cli": "^4.0.2",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.1",
-    "tailwindcss": "^4.0.2"
-  }
+	"name": "fexend",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx tailwindcss -i ./src/css/app.css -o ./dist/css/app.css --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@tailwindcss/cli": "^4.0.2",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.5.1",
+		"tailwindcss": "^4.0.2"
+	}
 }
