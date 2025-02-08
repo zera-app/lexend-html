@@ -1,6 +1,12 @@
 @import "./components/layout.css";
 @import "./components/navbar.css";
 @import "./components/sidebar.css";
+
 @import "./components/card.css";
 @import "./components/divider.css";
+
 @import "./components/button.css";
+
+@import "./components/input.css";
+@import "./components/radio.css";
+@import "./components/checkbox.css";

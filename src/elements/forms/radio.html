@@ -673,13 +673,598 @@
                     'ml-0': true
                 }"
 			>
-				<!-- <div class="card card-body min-h-[200vh]">
-					<h1
-						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
-					>
-						Dashboard
-					</h1>
-				</div> -->
+				<div class="card">
+					<div class="card-header">
+						<h3 class="card-title">Radio</h3>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<!-- Default Radio -->
+							<div>
+								<label class="form-radio">
+									<input
+										type="radio"
+										name="radio"
+										value="One"
+										class="radio-primary"
+										checked
+									/>
+									Input One
+								</label>
+
+								<label class="form-radio">
+									<input
+										type="radio"
+										name="radio"
+										value="Two"
+										class="radio-secondary"
+									/>
+									Input Two
+								</label>
+
+								<label class="form-radio">
+									<input
+										type="radio"
+										name="radio"
+										value="Three"
+										class="radio-success"
+									/>
+									Input Three
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Radio Card</h2>
+					</div>
+					<div class="card-body">
+						<fieldset class="grid grid-cols-2 gap-4">
+							<legend class="sr-only">Delivery</legend>
+
+							<div>
+								<label for="DeliveryStandard" class="radio-card">
+									<div>
+										<p>Standard</p>
+										<p>Free</p>
+									</div>
+
+									<input
+										type="radio"
+										name="DeliveryOption"
+										value="DeliveryStandard"
+										id="DeliveryStandard"
+										checked
+									/>
+								</label>
+							</div>
+
+							<div>
+								<label for="DeliveryPriority" class="radio-card">
+									<div>
+										<p>Next Day</p>
+										<p>£9.99</p>
+									</div>
+
+									<input
+										type="radio"
+										name="DeliveryOption"
+										value="DeliveryPriority"
+										id="DeliveryPriority"
+									/>
+								</label>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Radio Button</h2>
+					</div>
+					<div class="card-body">
+						<div>
+							<p>Default</p>
+							<fieldset class="flex flex-wrap gap-3">
+								<legend class="sr-only">Color</legend>
+
+								<div>
+									<label for="ColorBlack" class="radio-button">
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorBlack"
+											id="ColorBlack"
+											class="sr-only"
+											checked
+										/>
+
+										<p class="text-sm font-medium">Texas Tea</p>
+									</label>
+								</div>
+
+								<div>
+									<label for="ColorRed" class="radio-button">
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorRed"
+											id="ColorRed"
+											class="sr-only"
+										/>
+
+										<p class="text-sm font-medium">Fiesta Red</p>
+									</label>
+								</div>
+
+								<div>
+									<label for="ColorBlue" class="radio-button">
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorBlue"
+											id="ColorBlue"
+											class="sr-only"
+										/>
+
+										<p class="text-sm font-medium">Cobalt Blue</p>
+									</label>
+								</div>
+
+								<div>
+									<label for="ColorGold" class="radio-button">
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorGold"
+											id="ColorGold"
+											class="sr-only"
+										/>
+
+										<p class="text-sm font-medium">Goldtop</p>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="mt-4">
+							<p>Secondary</p>
+							<fieldset class="flex flex-wrap gap-3">
+								<legend class="sr-only">Color</legend>
+
+								<div>
+									<label
+										for="ColorBlack"
+										class="radio-button radio-button-secondary"
+									>
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorBlack"
+											id="ColorBlack"
+											class="sr-only"
+											checked
+										/>
+
+										<p class="text-sm font-medium">Texas Tea</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorRed"
+										class="radio-button radio-button-secondary"
+									>
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorRed"
+											id="ColorRed"
+											class="sr-only"
+										/>
+
+										<p class="text-sm font-medium">Fiesta Red</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorBlue"
+										class="radio-button radio-button-secondary"
+									>
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorBlue"
+											id="ColorBlue"
+											class="sr-only"
+										/>
+
+										<p class="text-sm font-medium">Cobalt Blue</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorGold"
+										class="radio-button radio-button-secondary"
+									>
+										<input
+											type="radio"
+											name="ColorOption"
+											value="ColorGold"
+											id="ColorGold"
+											class="sr-only"
+										/>
+
+										<p class="text-sm font-medium">Goldtop</p>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="mt-4">
+							<p>Success</p>
+							<fieldset class="flex flex-wrap gap-3">
+								<legend class="sr-only">Color</legend>
+
+								<div>
+									<label
+										for="ColorBlackSuccess"
+										class="radio-button radio-button-success"
+									>
+										<input
+											type="radio"
+											name="ColorOptionSuccess"
+											value="ColorBlackSuccess"
+											id="ColorBlackSuccess"
+											class="sr-only"
+											checked
+										/>
+										<p class="text-sm font-medium">Texas Tea</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorRedSuccess"
+										class="radio-button radio-button-success"
+									>
+										<input
+											type="radio"
+											name="ColorOptionSuccess"
+											value="ColorRedSuccess"
+											id="ColorRedSuccess"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Fiesta Red</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorBlueSuccess"
+										class="radio-button radio-button-success"
+									>
+										<input
+											type="radio"
+											name="ColorOptionSuccess"
+											value="ColorBlueSuccess"
+											id="ColorBlueSuccess"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Cobalt Blue</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorGoldSuccess"
+										class="radio-button radio-button-success"
+									>
+										<input
+											type="radio"
+											name="ColorOptionSuccess"
+											value="ColorGoldSuccess"
+											id="ColorGoldSuccess"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Goldtop</p>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="mt-4">
+							<p>Danger</p>
+							<fieldset class="flex flex-wrap gap-3">
+								<legend class="sr-only">Color</legend>
+
+								<div>
+									<label
+										for="ColorBlackDanger"
+										class="radio-button radio-button-danger"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDanger"
+											value="ColorBlackDanger"
+											id="ColorBlackDanger"
+											class="sr-only"
+											checked
+										/>
+										<p class="text-sm font-medium">Texas Tea</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorRedDanger"
+										class="radio-button radio-button-danger"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDanger"
+											value="ColorRedDanger"
+											id="ColorRedDanger"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Fiesta Red</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorBlueDanger"
+										class="radio-button radio-button-danger"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDanger"
+											value="ColorBlueDanger"
+											id="ColorBlueDanger"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Cobalt Blue</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorGoldDanger"
+										class="radio-button radio-button-danger"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDanger"
+											value="ColorGoldDanger"
+											id="ColorGoldDanger"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Goldtop</p>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="mt-4">
+							<p>Warning</p>
+							<fieldset class="flex flex-wrap gap-3">
+								<legend class="sr-only">Color</legend>
+
+								<div>
+									<label
+										for="ColorBlackWarning"
+										class="radio-button radio-button-warning"
+									>
+										<input
+											type="radio"
+											name="ColorOptionWarning"
+											value="ColorBlackWarning"
+											id="ColorBlackWarning"
+											class="sr-only"
+											checked
+										/>
+										<p class="text-sm font-medium">Texas Tea</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorRedWarning"
+										class="radio-button radio-button-warning"
+									>
+										<input
+											type="radio"
+											name="ColorOptionWarning"
+											value="ColorRedWarning"
+											id="ColorRedWarning"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Fiesta Red</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorBlueWarning"
+										class="radio-button radio-button-warning"
+									>
+										<input
+											type="radio"
+											name="ColorOptionWarning"
+											value="ColorBlueWarning"
+											id="ColorBlueWarning"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Cobalt Blue</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorGoldWarning"
+										class="radio-button radio-button-warning"
+									>
+										<input
+											type="radio"
+											name="ColorOptionWarning"
+											value="ColorGoldWarning"
+											id="ColorGoldWarning"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Goldtop</p>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="mt-4">
+							<p>Info</p>
+							<fieldset class="flex flex-wrap gap-3">
+								<legend class="sr-only">Color</legend>
+
+								<div>
+									<label
+										for="ColorBlackInfo"
+										class="radio-button radio-button-info"
+									>
+										<input
+											type="radio"
+											name="ColorOptionInfo"
+											value="ColorBlackInfo"
+											id="ColorBlackInfo"
+											class="sr-only"
+											checked
+										/>
+										<p class="text-sm font-medium">Texas Tea</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorRedInfo"
+										class="radio-button radio-button-info"
+									>
+										<input
+											type="radio"
+											name="ColorOptionInfo"
+											value="ColorRedInfo"
+											id="ColorRedInfo"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Fiesta Red</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorBlueInfo"
+										class="radio-button radio-button-info"
+									>
+										<input
+											type="radio"
+											name="ColorOptionInfo"
+											value="ColorBlueInfo"
+											id="ColorBlueInfo"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Cobalt Blue</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorGoldInfo"
+										class="radio-button radio-button-info"
+									>
+										<input
+											type="radio"
+											name="ColorOptionInfo"
+											value="ColorGoldInfo"
+											id="ColorGoldInfo"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Goldtop</p>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="mt-4">
+							<p>Dark</p>
+							<fieldset class="flex flex-wrap gap-3">
+								<legend class="sr-only">Color</legend>
+
+								<div>
+									<label
+										for="ColorBlackDark"
+										class="radio-button radio-button-dark"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDark"
+											value="ColorBlackDark"
+											id="ColorBlackDark"
+											class="sr-only"
+											checked
+										/>
+										<p class="text-sm font-medium">Texas Tea</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorRedDark"
+										class="radio-button radio-button-dark"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDark"
+											value="ColorRedDark"
+											id="ColorRedDark"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Fiesta Red</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorBlueDark"
+										class="radio-button radio-button-dark"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDark"
+											value="ColorBlueDark"
+											id="ColorBlueDark"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Cobalt Blue</p>
+									</label>
+								</div>
+
+								<div>
+									<label
+										for="ColorGoldDark"
+										class="radio-button radio-button-dark"
+									>
+										<input
+											type="radio"
+											name="ColorOptionDark"
+											value="ColorGoldDark"
+											id="ColorGoldDark"
+											class="sr-only"
+										/>
+										<p class="text-sm font-medium">Goldtop</p>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- Mobile Bottom Menu -->

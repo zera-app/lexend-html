@@ -673,13 +673,128 @@
                     'ml-0': true
                 }"
 			>
-				<!-- <div class="card card-body min-h-[200vh]">
-					<h1
-						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
-					>
-						Dashboard
-					</h1>
-				</div> -->
+				<div class="card">
+					<div class="card-header">
+						<h2 class="card-title">Default</h1>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label>Form name <span class="text-danger">*</span></label>
+							<input type="text" placeholder="Form name" required />
+						</div>
+						<div class="form-group">
+							<label>Form disabled <span class="text-info">*</span></label>
+							<input type="text" placeholder="Form name" required disabled/>
+						</div>
+						<div class="form-group">
+							<label>Form readonly<span class="text-info">*</span></label>
+							<input type="text" placeholder="Form name" required readonly/>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Form Error</h1>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label class="form-error"
+								>Form name <span class="text-danger">*</span></label
+							>
+							<input
+								type="text"
+								class="form-error"
+								placeholder="Form name"
+								required
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Form Valid</h1>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label class="form-valid"
+								>Form name <span class="text-danger">*</span></label
+							>
+							<input
+								type="text"
+								class="form-valid"
+								placeholder="Form name"
+								required
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Form Rounded</h1>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label>Form name <span class="text-danger">*</span></label>
+							<input
+								type="text"
+								class="form-rounded"
+								placeholder="Form name"
+								required
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Sizing Input Examples</h2>
+					</div>
+					<div class="card-body">
+						<div class="form-group mb-4">
+							<label>Form name <span class="text-danger">*</span></label>
+							<input
+								type="text"
+								class="form-sm"
+								placeholder="Form name"
+								required
+							/>
+						</div>
+						<div class="form-group mb-4">
+							<label>Form name <span class="text-danger">*</span></label>
+							<input type="text" placeholder="Form name" required />
+						</div>
+						<div class="form-group">
+							<label>Form name <span class="text-danger">*</span></label>
+							<input
+								type="text"
+								class="form-lg"
+								placeholder="Form name"
+								required
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Input Group</h2>
+					</div>
+					<div class="card-body">
+						<p>TODO: input with icon or input group</p>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Input Mask</h2>
+					</div>
+					<div class="card-body">
+						<p>TODO: input mask, like money, phone number, use cleave.js or alpine.js</p>
+					</div>
+				</div>
 			</div>
 
 			<!-- Mobile Bottom Menu -->

@@ -673,13 +673,84 @@
                     'ml-0': true
                 }"
 			>
-				<!-- <div class="card card-body min-h-[200vh]">
-					<h1
-						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
-					>
-						Dashboard
-					</h1>
-				</div> -->
+				<div class="card">
+					<div class="card-title">
+						<h2 class="card-title">Default</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<div class="form-group">
+								<label for="basic-textarea"
+									>Basic Textarea <span class="text-danger">*</span></label
+								>
+								<textarea
+									id="basic-textarea"
+									placeholder="Enter some text..."
+								></textarea>
+							</div>
+							<div class="form-group">
+								<label for="basic-textarea"
+									>Disabled <span class="text-danger">*</span></label
+								>
+								<textarea
+									id="basic-textarea"
+									placeholder="Enter some text..."
+									disabled
+								></textarea>
+							</div>
+							<div class="form-group">
+								<label for="basic-textarea"
+									>Readonly <span class="text-danger">*</span></label
+								>
+								<textarea
+									id="basic-textarea"
+									placeholder="Enter some text..."
+									readonly
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mt-4">
+					<div class="card-title">
+						<h2 class="card-title">Textarea Error</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<!-- Basic Textarea -->
+							<div class="form-group">
+								<label for="basic-textarea" class="form-error"
+									>Basic Textarea <span class="text-danger">*</span></label
+								>
+								<textarea
+									id="basic-textarea"
+									class="form-error"
+									placeholder="Enter some text..."
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mt-4">
+					<div class="card-title">
+						<h2 class="card-title">Textarea Valid</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<!-- Basic Textarea -->
+							<div class="form-group">
+								<label for="basic-textarea" class="form-valid"
+									>Basic Textarea <span class="text-danger">*</span></label
+								>
+								<textarea
+									id="basic-textarea"
+									class="form-valid"
+									placeholder="Enter some text..."
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- Mobile Bottom Menu -->
