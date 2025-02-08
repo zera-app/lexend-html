@@ -20,12 +20,15 @@
 	--color-foreground-dark: #0f172a;
 	--color-background: #f1f5f9;
 	--color-background-dark: #020617;
+	--color-dark: #020618;
+	--color-dark-secondary: #020618;
+	--color-white-dark: #f1f5f9;
 }
 
 /* Base Styles */
 body {
 	@apply font-sans text-base bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100;
-	font-family: "Fexend", sans-serif;
+	font-family: "Lexend", sans-serif;
 }
 
 html.dark body {
@@ -37,9 +40,9 @@ html.dark body {
 }
 
 /* Transitions */
-.transition-default {
+/* .transition-default {
 	@apply transition-all duration-200;
-}
+} */
 
 /* Group Hover Effects */
 .group:hover span {

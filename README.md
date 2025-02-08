@@ -24,15 +24,9 @@ npm install && npm run dev
 
 # TODO
 
-## Overall
-
-- [] SEMANTIC ELEMENT
-- [] Dark component e.g button-dark
-- [] White component e.g button-white
-
 ## Element
 
-[] Button
+[x] Button
 [] Forms
 
 ## Component

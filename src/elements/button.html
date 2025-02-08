@@ -167,12 +167,7 @@
 									<div
 										x-show="notificationOpen"
 										@click.away="notificationOpen = false"
-										x-transition:enter="transition ease-out duration-200"
-										x-transition:enter-start="opacity-0 transform translate-y-2"
-										x-transition:enter-end="opacity-100 transform translate-y-0"
-										x-transition:leave="transition ease-in duration-150"
-										x-transition:leave-start="opacity-100 transform translate-y-0"
-										x-transition:leave-end="opacity-0 transform translate-y-2"
+										x-transition
 										class="absolute right-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-10"
 									>
 										<div
@@ -691,8 +686,8 @@
 						<button class="button button-success">Success</button>
 						<button class="button button-danger">Danger</button>
 						<button class="button button-info">Info</button>
-						<button class="button button-foreground">Foreground</button>
-						<button class="button button-background">Background</button>
+						<button class="button button-white">white</button>
+						<button class="button button-dark">Dark</button>
 					</div>
 				</div>
 
@@ -715,12 +710,8 @@
 						</button>
 						<button class="button button-danger button-rounded">Danger</button>
 						<button class="button button-info button-rounded">Info</button>
-						<button class="button button-foreground button-rounded">
-							Foreground
-						</button>
-						<button class="button button-background button-rounded">
-							Background
-						</button>
+						<button class="button button-white button-rounded">White</button>
+						<button class="button button-dark button-rounded">Dark</button>
 					</div>
 				</div>
 
@@ -745,12 +736,8 @@
 							Danger
 						</button>
 						<button class="button button-block button-info my-2">Info</button>
-						<button class="button button-block button-foreground my-2">
-							Foreground
-						</button>
-						<button class="button button-block button-background my-2">
-							Background
-						</button>
+						<button class="button button-block button-white my-2">White</button>
+						<button class="button button-block button-dark my-2">Dark</button>
 					</div>
 				</div>
 
@@ -765,8 +752,8 @@
 						<button class="button button-success-outline">Success</button>
 						<button class="button button-danger-outline">Danger</button>
 						<button class="button button-info-outline">Info</button>
-						<button class="button button-foreground-outline">Foreground</button>
-						<button class="button button-background-outline">Background</button>
+						<button class="button button-white-outline">white</button>
+						<button class="button button-dark-outline">Dark</button>
 					</div>
 				</div>
 
@@ -781,8 +768,8 @@
 						<button class="button button-success-flat">Success</button>
 						<button class="button button-danger-flat">Danger</button>
 						<button class="button button-info-flat">Info</button>
-						<button class="button button-foreground-flat">Foreground</button>
-						<button class="button button-background-flat">Background</button>
+						<button class="button button-white-flat">white</button>
+						<button class="button button-dark-flat">Dark</button>
 					</div>
 				</div>
 
@@ -832,23 +819,15 @@
 						</div>
 
 						<div class="gap-4 mt-4">
-							<button class="button button-sm button-foreground">
-								Foreground
-							</button>
-							<button class="button button-foreground">Foreground</button>
-							<button class="button button-lg button-foreground">
-								Foreground
-							</button>
+							<button class="button button-sm button-white">white</button>
+							<button class="button button-white">white</button>
+							<button class="button button-lg button-white">white</button>
 						</div>
 
 						<div class="gap-4 mt-4">
-							<button class="button button-sm button-background">
-								Background
-							</button>
-							<button class="button button-background">Background</button>
-							<button class="button button-lg button-background">
-								Background
-							</button>
+							<button class="button button-sm button-dark">Dark</button>
+							<button class="button button-dark">Dark</button>
+							<button class="button button-lg button-dark">Dark</button>
 						</div>
 					</div>
 				</div>
