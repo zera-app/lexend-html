@@ -688,9 +688,69 @@
 									placeholder="Select a date"
 								/>
 							</div>
+							<div>
+								<label for="date">Date Disabled</label>
+								<input
+									type="date"
+									id="date"
+									name="date"
+									placeholder="Select a date"
+									disabled
+								/>
+							</div>
+							<div>
+								<label for="date">Date Readonly</label>
+								<input
+									type="date"
+									id="date"
+									name="date"
+									placeholder="Select a date"
+									readonly
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Date Error</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<div>
+								<label for="date" class="form-error">Date</label>
+								<input
+									type="date"
+									id="date"
+									name="date"
+									placeholder="Select a date"
+									class="form-error"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Date Valid</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<div>
+								<label for="date" class="form-valid">Date</label>
+								<input
+									type="date"
+									id="date"
+									name="date"
+									placeholder="Select a date"
+									class="form-valid"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="card mt-4">
 					<div class="card-header">
 						<h2 class="card-title">Flatpickr</h2>

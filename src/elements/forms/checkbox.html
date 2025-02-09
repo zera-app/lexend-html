@@ -98,7 +98,7 @@
 		<main class="main-content">
 			<!-- Navbar -->
 			<header class="navbar-layout">
-				<nav class="">
+				<nav>
 					<div class="px-3 py-3 lg:px-5 lg:pl-3">
 						<div class="flex items-center justify-between">
 							<div class="flex items-center">
@@ -684,17 +684,29 @@
 
 								<div class="space-y-2">
 									<label for="Option1" class="label-checkbox">
-										<input type="checkbox" class="" id="Option1" />
+										<input
+											type="checkbox"
+											class="input-checkbox"
+											id="Option1"
+										/>
 										John Clapton
 									</label>
 
 									<label for="Option2" class="label-checkbox">
-										<input type="checkbox" class="" id="Option2" />
+										<input
+											type="checkbox"
+											class="input-checkbox"
+											id="Option2"
+										/>
 										Peter Mayer
 									</label>
 
 									<label for="Option3" class="label-checkbox">
-										<input type="checkbox" class="" id="Option3" />
+										<input
+											type="checkbox"
+											class="input-checkbox"
+											id="Option3"
+										/>
 										Mark Johnson
 									</label>
 								</div>
@@ -714,37 +726,47 @@
 
 								<div class="divide-y divide-gray-200 dark:divide-gray-700">
 									<label for="OptionOne" class="label-checkbox-divider">
-										<input type="checkbox" id="OptionOne" />
+										<input
+											type="checkbox"
+											class="input-checkbox"
+											id="OptionOne"
+										/>
 
 										<div>
 											<p>John Clapton</p>
-											<span>
-												Lorem ipsum dolor sit amet consectetur.
-											</p>
+											<span> Lorem ipsum dolor sit amet consectetur. </span>
 										</div>
 									</label>
 
 									<label for="OptionTwo" class="label-checkbox-divider">
-										<input type="checkbox" id="OptionTwo" />
+										<input
+											type="checkbox"
+											class="input-checkbox"
+											id="OptionTwo"
+										/>
 
 										<div>
 											<p>Peter Mayer</p>
 											<span>
 												Lorem ipsum dolor sit, amet consectetur adipisicing
 												elit. Architecto!
-											</p>
+											</span>
 										</div>
 									</label>
 
 									<label for="OptionThree" class="label-checkbox-divider">
-										<input type="checkbox" id="OptionThree" />
+										<input
+											type="checkbox"
+											class="input-checkbox"
+											id="OptionThree"
+										/>
 
 										<div>
 											<p>Eric King</p>
 											<span>
 												Lorem ipsum dolor sit amet consectetur adipisicing elit.
 												Deleniti, mollitia.
-											</p>
+											</span>
 										</div>
 									</label>
 								</div>
@@ -755,9 +777,65 @@
 
 				<div class="card mt-4">
 					<div class="card-header">
-						<h2 class="card-title">
-							Checkbox Card
-						</h2>
+						<h2 class="card-title">Checkbox Card</h2>
+					</div>
+					<div class="card-body">
+						<fieldset>
+							<legend class="sr-only">Checkboxes</legend>
+
+							<div class="space-y-2">
+								<label for="Option1Card" class="label-checkbox-card">
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option1Card"
+									/>
+
+									<div>
+										<p>John Clapton</p>
+										<span>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										</span>
+									</div>
+								</label>
+
+								<label for="Option2Card" class="label-checkbox-card">
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option2Card"
+									/>
+
+									<div>
+										<p>Peter Mayer</p>
+
+										<span> Lorem ipsum dolor sit amet consectetur. </span>
+									</div>
+								</label>
+
+								<label for="Option3Card" class="label-checkbox-card">
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option3Card"
+									/>
+
+									<div>
+										<p>Eric King</p>
+
+										<span>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										</span>
+									</div>
+								</label>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Checkbox Card with Color Variants</h2>
 					</div>
 					<div class="card-body">
 						<fieldset>
@@ -765,69 +843,135 @@
 
 							<div class="space-y-2">
 								<label
-								for="Option1"
-								class="flex cursor-pointer items-start gap-4 rounded-lg border border-gray-200 p-4 transition hover:bg-gray-50 has-[:checked]:bg-blue-50 dark:border-gray-700 dark:hover:bg-gray-900 dark:has-[:checked]:bg-blue-700/10"
+									for="Option1CardPrimary"
+									class="label-checkbox-card label-checkbox-card-primary"
 								>
-								<div class="flex items-center">
-									&#8203;
 									<input
-									type="checkbox"
-									class="size-4 rounded-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-									id="Option1"
+										type="checkbox"
+										class="input-checkbox"
+										id="Option1CardPrimary"
 									/>
-								</div>
-
-								<div>
-									<strong class="font-medium text-gray-900 dark:text-white"> John Clapton </strong>
-
-									<p class="mt-1 text-sm text-pretty text-gray-700 dark:text-gray-200">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									</p>
-								</div>
+									<div>
+										<p>Primary Option</p>
+										<span
+											>Lorem ipsum dolor sit amet consectetur adipisicing
+											elit.</span
+										>
+									</div>
 								</label>
 
 								<label
-								for="Option2"
-								class="flex cursor-pointer items-start gap-4 rounded-lg border border-gray-200 p-4 transition hover:bg-gray-50 has-[:checked]:bg-blue-50 dark:border-gray-700 dark:hover:bg-gray-900 dark:has-[:checked]:bg-blue-700/10"
+									for="Option2CardSecondary"
+									class="label-checkbox-card label-checkbox-card-secondary"
 								>
-								<div class="flex items-center">
-									&#8203;
 									<input
-									type="checkbox"
-									class="size-4 rounded-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-									id="Option2"
+										type="checkbox"
+										class="input-checkbox"
+										id="Option2CardSecondary"
 									/>
-								</div>
-
-								<div>
-									<strong class="font-medium text-gray-900 dark:text-white"> Peter Mayer </strong>
-
-									<p class="mt-1 text-sm text-pretty text-gray-700 dark:text-gray-200">
-									Lorem ipsum dolor sit amet consectetur.
-									</p>
-								</div>
+									<div>
+										<p>Secondary Option</p>
+										<span>Lorem ipsum dolor sit amet consectetur.</span>
+									</div>
 								</label>
 
 								<label
-								for="Option3"
-								class="flex cursor-pointer items-start gap-4 rounded-lg border border-gray-200 p-4 transition hover:bg-gray-50 has-[:checked]:bg-blue-50 dark:border-gray-700 dark:hover:bg-gray-900 dark:has-[:checked]:bg-blue-700/10"
+									for="Option3CardWarning"
+									class="label-checkbox-card label-checkbox-card-warning"
 								>
-								<div class="flex items-center">
-									&#8203;
 									<input
-									type="checkbox"
-									class="size-4 rounded-sm border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-gray-900"
-									id="Option3"
+										type="checkbox"
+										class="input-checkbox"
+										id="Option3CardWarning"
 									/>
-								</div>
+									<div>
+										<p>Warning Option</p>
+										<span
+											>Lorem ipsum dolor sit amet consectetur adipisicing
+											elit.</span
+										>
+									</div>
+								</label>
 
-								<div>
-									<strong class="font-medium text-pretty text-gray-900 dark:text-white"> Eric King </strong>
+								<label
+									for="Option4CardSuccess"
+									class="label-checkbox-card label-checkbox-card-success"
+								>
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option4CardSuccess"
+									/>
+									<div>
+										<p>Success Option</p>
+										<span>Lorem ipsum dolor sit amet consectetur.</span>
+									</div>
+								</label>
 
-									<p class="mt-1 text-sm text-pretty text-gray-700 dark:text-gray-200">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									</p>
-								</div>
+								<label
+									for="Option5CardDanger"
+									class="label-checkbox-card label-checkbox-card-danger"
+								>
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option5CardDanger"
+									/>
+									<div>
+										<p>Danger Option</p>
+										<span
+											>Lorem ipsum dolor sit amet consectetur adipisicing
+											elit.</span
+										>
+									</div>
+								</label>
+
+								<label
+									for="Option6CardInfo"
+									class="label-checkbox-card label-checkbox-card-info"
+								>
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option6CardInfo"
+									/>
+									<div>
+										<p>Info Option</p>
+										<span>Lorem ipsum dolor sit amet consectetur.</span>
+									</div>
+								</label>
+
+								<label
+									for="Option7CardWhite"
+									class="label-checkbox-card label-checkbox-card-white"
+								>
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option7CardWhite"
+									/>
+									<div>
+										<p>White Option</p>
+										<span
+											>Lorem ipsum dolor sit amet consectetur adipisicing
+											elit.</span
+										>
+									</div>
+								</label>
+
+								<label
+									for="Option8CardDark"
+									class="label-checkbox-card label-checkbox-card-dark"
+								>
+									<input
+										type="checkbox"
+										class="input-checkbox"
+										id="Option8CardDark"
+									/>
+									<div>
+										<p>Dark Option</p>
+										<span>Lorem ipsum dolor sit amet consectetur.</span>
+									</div>
 								</label>
 							</div>
 						</fieldset>
