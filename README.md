@@ -24,11 +24,6 @@ npm install && npm run dev
 
 # TODO
 
-## Element
-
-[x] Button
-[] Forms
-
 ## Component
 
 [] ...
