@@ -22,13 +22,24 @@ cd fexend-html
 npm install && npm run dev
 ```
 
+## UI Resource or Inspiration
+
+- [HyperUi](https://www.hyperui.dev)
+- [Tailwind Element](https://tw-elements.com/)
+- [Flowbite](https://flowbite.com/)
+
+## Package Use
+
+- Alpine Js Latest
+- Tailwindcss 4
+
 # TODO
 
 ## Component
 
 [] ...
 
-## Dashoard
+## Dashboard
 
 [] ...
 

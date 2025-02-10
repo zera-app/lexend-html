@@ -1060,6 +1060,11 @@
       margin-left: calc(var(--spacing) * 80);
     }
   }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
   .md\:text-2xl {
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
@@ -2367,7 +2372,8 @@ p, a, li, span {
 }
 .card {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
+  background-color: var(--color-foreground);
   padding: calc(var(--spacing) * 6);
   --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2376,18 +2382,22 @@ p, a, li, span {
   transition-duration: var(--tw-duration, var(--default-transition-duration));
   --tw-duration: 200ms;
   transition-duration: 200ms;
-  background: var(--color-foreground);
-  color: var(--color-foreground-dark);
+  &:where(.dark, .dark *) {
+    background-color: var(--color-foreground-dark);
+  }
 }
 .card-primary {
   border-style: var(--tw-border-style);
   border-width: 2px;
+  border-color: var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-white);
   &:where(.dark, .dark *) {
+    border-color: var(--color-primary-dark);
+  }
+  &:where(.dark, .dark *) {
     background-color: var(--color-primary-dark);
   }
-  border-color: var(--color-primary);
 }
 .card-secondary {
   border-style: var(--tw-border-style);
@@ -2423,12 +2433,9 @@ p, a, li, span {
   border-style: var(--tw-border-style);
   border-width: 2px;
   background-color: var(--color-warning);
-  color: var(--color-black);
+  color: var(--color-white);
   &:where(.dark, .dark *) {
     background-color: var(--color-warning-dark);
-  }
-  &:where(.dark, .dark *) {
-    color: var(--color-black);
   }
   border-color: var(--color-warning);
 }
@@ -2447,10 +2454,6 @@ p, a, li, span {
   transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-}
-.dark .card {
-  background: var(--color-foreground-dark);
-  color: var(--color-foreground);
 }
 .card-sm {
   padding: calc(var(--spacing) * 4);
@@ -2473,13 +2476,7 @@ p, a, li, span {
 }
 .card-footer {
   margin-top: calc(var(--spacing) * 4);
-  border-top-style: var(--tw-border-style);
-  border-top-width: 1px;
-  border-color: var(--color-gray-200);
   padding-top: calc(var(--spacing) * 4);
-  &:where(.dark, .dark *) {
-    border-color: var(--color-gray-700);
-  }
 }
 .card.loading {
   animation: var(--animate-pulse);
@@ -6234,6 +6231,8 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
   color: var(--color-slate-900);
   &:where(.dark, .dark *) {
     background-color: var(--color-slate-950);
