@@ -2,6 +2,7 @@
 @import "./components/navbar.css";
 @import "./components/sidebar.css";
 
+@import "./components/accordion.css";
 @import "./components/card.css";
 @import "./components/divider.css";
 
