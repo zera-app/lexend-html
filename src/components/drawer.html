@@ -658,12 +658,85 @@
                     'ml-0': true
                 }"
 			>
-				<!-- <div class="card card-body min-h-[200vh]">
-					<h1
-						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
+				<!-- Drawer Buttons -->
+				<div class="p-4 space-x-2 isolated z-10">
+					<div
+						class="w-full"
+						x-data="{
+							drawerOpen: false,
+							drawerType: '',
+							backdropBlur: false
+					}"
 					>
-						Dashboard
-					</h1>
+						<button
+							@click="drawerOpen = true; drawerType = 'left'"
+							class="button button-primary"
+						>
+							Open Left Drawer
+						</button>
+						<!-- Drawer Backdrop -->
+						<div
+							x-show="drawerOpen"
+							:class="backdropBlur ? 'drawer-backdrop drawer-backdrop-blur' : 'drawer-backdrop'"
+							@click="drawerOpen = false"
+						></div>
+
+						<!-- Left Drawer -->
+						<div
+							x-show="drawerOpen && drawerType === 'left'"
+							class="drawer drawer-left bg-white dark:bg-gray-800 min-w-lg"
+							:class="{ 'drawer-open': drawerOpen }"
+						>
+							<button @click="drawerOpen = false" class="drawer-close-button">
+								Close
+							</button>
+							<div class="p-4">Left Drawer Content</div>
+						</div>
+					</div>
+
+					<!-- <button
+						@click="drawerOpen = true; drawerType = 'right'"
+						class="button button-primary"
+					>
+						Open Right Drawer
+					</button>
+					<button
+						@click="drawerOpen = true; drawerType = 'bottom'"
+						class="button button-primary"
+					>
+						Open Bottom Drawer
+					</button>
+					<label class="inline-flex items-center ml-4">
+						<input
+							type="checkbox"
+							x-model="backdropBlur"
+							class="form-checkbox"
+						/>
+						<span class="ml-2">Blur Backdrop</span>
+					</label>
+				</div>
+
+				Right Drawer
+				<div
+					x-show="drawerOpen && drawerType === 'right'"
+					class="drawer drawer-right"
+					:class="{ 'drawer-open': drawerOpen }"
+				>
+					<button @click="drawerOpen = false" class="drawer-close-button">
+						Close
+					</button>
+					<div class="p-4">Right Drawer Content</div>
+				</div>
+
+				<div
+					x-show="drawerOpen && drawerType === 'bottom'"
+					class="drawer drawer-bottom"
+					:class="{ 'drawer-open': drawerOpen }"
+				>
+					<button @click="drawerOpen = false" class="drawer-close-button">
+						Close
+					</button>
+					<div class="p-4">Bottom Drawer Content</div>
 				</div> -->
 			</main>
 		</div>
