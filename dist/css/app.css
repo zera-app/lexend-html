@@ -650,6 +650,10 @@
   .inline-flex {
     display: inline-flex;
   }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
   .size-5 {
     width: calc(var(--spacing) * 5);
     height: calc(var(--spacing) * 5);
@@ -2277,6 +2281,88 @@ p, a, li, span {
   }
   &:where(.dark, .dark *) {
     color: var(--color-white);
+  }
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb ol {
+  display: flex;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-slate-200);
+  color: var(--color-slate-900);
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  &:where(.dark, .dark *) {
+    border-color: var(--color-slate-700);
+  }
+  &:where(.dark, .dark *) {
+    color: var(--color-slate-100);
+  }
+}
+.breadcrumb .title {
+  margin-right: calc(var(--spacing) * 4);
+  display: none;
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-tracking: var(--tracking-wider);
+  letter-spacing: var(--tracking-wider);
+  @media (width >= 64rem) {
+    display: block;
+  }
+}
+.breadcrumb ol li {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb ol li a {
+  display: flex;
+  height: calc(var(--spacing) * 10);
+  align-items: center;
+  gap: calc(var(--spacing) * 1.5);
+  background-color: var(--color-foreground);
+  padding-inline: calc(var(--spacing) * 4);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  &:where(.dark, .dark *) {
+    background-color: var(--color-foreground-dark);
+  }
+}
+.breadcrumb ol li:nth-last-child(1) {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.breadcrumb ol li:nth-last-child(1) span {
+  position: absolute;
+  inset-block: calc(var(--spacing) * 0);
+  inset-inline-start: -1px;
+  height: calc(var(--spacing) * 10);
+  width: calc(var(--spacing) * 4);
+  background-color: var(--color-foreground);
+  clip-path:  polygon(0 0, 0% 100%, 100% 50%);
+  &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
+    rotate: 180deg;
+  }
+  &:where(.dark, .dark *) {
+    background-color: var(--color-foreground-dark);
+  }
+}
+.breadcrumb ol li:nth-last-child(1) a {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 1.5);
+  background-color: var(--color-slate-200);
+  padding-inline: calc(var(--spacing) * 4);
+  &:where(.dark, .dark *) {
+    background-color: var(--color-background-dark);
   }
 }
 .card {
