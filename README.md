@@ -37,37 +37,37 @@ npm install && npm run dev
 
 ## Component
 
-- [] PopOver
-- [] Tab
-- [] Table
-- [] Tooltip
+- [ ] PopOver
+- [ ] Tab
+- [ ] Table
+- [ ] Tooltip
 
 ## Dashboard
 
-- [] Dashboard 1
-- [] Dashboard 2
-- [] Dashboard 3
+- [ ] Dashboard 1
+- [ ] Dashboard 2
+- [ ] Dashboard 3
 
 ## Pages & Layout
 
-- [] Login
-- [] SignUp
-- [] ForgotPassword
-- [] Reset Password
-- [] Profile
-- [] Setting
-- [] Layout 1
-- [] Layout 2
-- [] Layout 3
-- [] Layout 4
+- [ ] Login
+- [ ] SignUp
+- [ ] ForgotPassword
+- [ ] Reset Password
+- [ ] Profile
+- [ ] Setting
+- [ ] Layout 1
+- [ ] Layout 2
+- [ ] Layout 3
+- [ ] Layout 4
 
-## next release
+## Next Release
 
-- [] wyswyd input (tinymce or something else)
-- [] change the title for each page
-- [] add a breadcrumb for each page
-- [] flatpickr
-- [] Input with icon
-- [] input mask (phone, money)
-- [] select2
-- [] dropdown for file input
+- [ ] wyswyd input (tinymce or something else)
+- [ ] change the title for each page
+- [ ] add a breadcrumb for each page
+- [ ] flatpickr
+- [ ] Input with icon
+- [ ] input mask (phone, money)
+- [ ] select2
+- [ ] dropdown for file input
