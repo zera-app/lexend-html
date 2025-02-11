@@ -37,7 +37,6 @@ npm install && npm run dev
 
 ## Component
 
-- [ ] PopOver
 - [ ] Tab
 - [ ] Table
 - [ ] Tooltip
