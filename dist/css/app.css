@@ -659,6 +659,10 @@
   .inline-flex {
     display: inline-flex;
   }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
   .size-4 {
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
@@ -1019,9 +1023,6 @@
   }
   .text-info {
     color: var(--color-info);
-  }
-  .text-red-500 {
-    color: var(--color-red-500);
   }
   .text-success {
     color: var(--color-success);
@@ -3043,6 +3044,45 @@ p, a, li, span {
 .modal-bottom-right {
   align-items: flex-end;
   justify-content: flex-end;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: calc(var(--spacing) * 2);
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+}
+.pagination-link {
+  display: block;
+  width: calc(var(--spacing) * 8);
+  height: calc(var(--spacing) * 8);
+  border-radius: var(--radius-sm);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-gray-100);
+  background-color: var(--color-white);
+  text-align: center;
+  --tw-leading: calc(var(--spacing) * 8);
+  line-height: calc(var(--spacing) * 8);
+  &:where(.dark, .dark *) {
+    border-color: var(--color-slate-700);
+  }
+  &:where(.dark, .dark *) {
+    background-color: var(--color-dark);
+  }
+}
+.pagination-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-link.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  &:where(.dark, .dark *) {
+    background-color: var(--color-primary-dark);
+  }
 }
 .button {
   cursor: pointer;
@@ -7183,6 +7223,10 @@ html.dark body {
   inherits: false;
 }
 @property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
