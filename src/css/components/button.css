@@ -22,6 +22,14 @@
 	@apply rounded-full;
 }
 
+.button-group {
+	@apply flex items-center justify-between space-x-2;
+}
+
+.button-icon {
+	@apply px-2;
+}
+
 .button-primary {
 	@apply bg-primary 
 	dark:bg-primary-dark 
