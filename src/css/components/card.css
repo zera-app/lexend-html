@@ -64,3 +64,19 @@
 .card.loading {
 	@apply animate-pulse;
 }
+
+.card-table {
+	@apply relative bg-foreground dark:bg-foreground-dark rounded-md shadow-md transition-all duration-200;
+}
+
+.card-table .card-header {
+	@apply p-6;
+}
+
+.card-content {
+	@apply p-4 pt-0 flex justify-between;
+}
+
+.card-table .table-filter {
+	@apply relative p-4 mb-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 transition-transform ease-in-out;
+}

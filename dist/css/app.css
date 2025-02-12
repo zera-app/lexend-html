@@ -665,6 +665,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .size-3 {
     width: calc(var(--spacing) * 3);
     height: calc(var(--spacing) * 3);
@@ -742,6 +745,9 @@
   }
   .max-w-2xl {
     max-width: var(--container-2xl);
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -1091,6 +1097,9 @@
   }
   .drop-shadow-2xl {
     --tw-drop-shadow: drop-shadow(var(--drop-shadow-2xl));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur-none {
@@ -2687,6 +2696,49 @@ p, a, li, span {
 .card.loading {
   animation: var(--animate-pulse);
 }
+.card-table {
+  position: relative;
+  border-radius: var(--radius-md);
+  background-color: var(--color-foreground);
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  &:where(.dark, .dark *) {
+    background-color: var(--color-foreground-dark);
+  }
+}
+.card-table .card-header {
+  padding: calc(var(--spacing) * 6);
+}
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  padding: calc(var(--spacing) * 4);
+  padding-top: calc(var(--spacing) * 0);
+}
+.card-table .table-filter {
+  position: relative;
+  margin-bottom: calc(var(--spacing) * 6);
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 4);
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 .collapse-bordered {
   .collapse-header {
     border-bottom-style: var(--tw-border-style);
@@ -3275,6 +3327,72 @@ p, a, li, span {
   &:where(.dark, .dark *) {
     color: var(--color-primary-dark);
   }
+}
+table {
+  width: 100%;
+  text-align: left;
+}
+thead {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+  border-color: var(--color-slate-200);
+  &:where(.dark, .dark *) {
+    border-color: var(--color-slate-800);
+  }
+}
+thead.thead-dark {
+  background-color: var(--color-slate-200);
+  &:where(.dark, .dark *) {
+    background-color: var(--color-slate-900);
+  }
+}
+table.hover tbody tr {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-slate-100);
+    }
+  }
+  &:where(.dark, .dark *) {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-slate-800);
+      }
+    }
+  }
+}
+table.striped tbody tr:nth-child(odd) {
+  background-color: var(--color-slate-200);
+  &:where(.dark, .dark *) {
+    background-color: var(--color-slate-800);
+  }
+}
+th {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
+tfoot {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+  border-color: var(--color-slate-200);
+  &:where(.dark, .dark *) {
+    border-color: var(--color-slate-800);
+  }
+}
+tfoot tr {
+  --tw-border-style: none;
+  border-style: none;
+}
+tr {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+  border-color: var(--color-slate-200);
+  &:where(.dark, .dark *) {
+    border-color: var(--color-slate-800);
+  }
+}
+td, th {
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
 }
 .button {
   cursor: pointer;
