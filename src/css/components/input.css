@@ -119,7 +119,7 @@ label input[type="checkbox"] {
 .form-group {
 	@apply flex 
 	flex-col 
-	mt-2;
+	mt-4;
 }
 
 .form-sm {
