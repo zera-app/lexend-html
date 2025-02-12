@@ -13,6 +13,13 @@
 			rel="stylesheet"
 		/>
 
+		<!-- Alpine Plugins -->
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+		></script>
+
+		<!-- Alpine Core -->
 		<script
 			defer
 			src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
@@ -301,41 +308,6 @@
 				<!-- Icon Sidebar - Hidden on mobile, visible on tablet and up -->
 				<div class="sidebar-icon">
 					<div>
-						<div class="inline-flex h-16 w-16 items-center justify-center">
-							<a
-								href="/src/settings/index.html"
-								x-data="{ tooltip: false }"
-								@mouseover="tooltip = true"
-								@mouseleave="tooltip = false"
-								class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									class="icon icon-tabler icons-tabler-outline icon-tabler-settings"
-								>
-									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-									<path
-										d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
-									/>
-									<path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-								</svg>
-								<span
-									x-show="tooltip"
-									x-transition
-									class="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-max bg-slate-800 text-white rounded py-1 px-2 whitespace-nowrap z-[100] font-normal"
-									>Settings</span
-								>
-							</a>
-						</div>
-
 						<div class="border-t border-gray-100 dark:border-gray-700">
 							<div class="px-2">
 								<ul
@@ -495,42 +467,80 @@
 						</div>
 					</div>
 
-					<div
-						class="sticky inset-x-0 bottom-0 border-t border-gray-100 dark:border-gray-700 bg-foreground dark:bg-background-dark p-2"
-					>
-						<!-- Logout -->
-						<div class="relative" x-data="{ tooltip: false }">
-							<form action="#">
-								<button
-									type="submit"
-									class="group relative flex w-full justify-center rounded-sm px-2 py-1.5 text-sm text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+					<div>
+						<div class="sticky inset-x-0 bottom-0 border-t">
+							<div class="inline-flex h-16 w-16 items-center justify-center">
+								<a
+									href="/src/settings/index.html"
+									x-data="{ tooltip: false }"
 									@mouseover="tooltip = true"
 									@mouseleave="tooltip = false"
+									class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
 								>
-									<!-- Logout Icon -->
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										class="size-5 opacity-75"
-										fill="none"
+										width="24"
+										height="24"
 										viewBox="0 0 24 24"
+										fill="none"
 										stroke="currentColor"
 										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="icon icon-tabler icons-tabler-outline icon-tabler-settings"
 									>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+											d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
 										/>
+										<path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
 									</svg>
-								</button>
-								<span
-									x-show="tooltip"
-									x-transition
-									class="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-max bg-slate-800 text-white rounded py-1 px-2 whitespace-nowrap z-[100] font-normal"
-								>
-									Logout
-								</span>
-							</form>
+									<span
+										x-show="tooltip"
+										x-transition
+										class="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-max bg-slate-800 text-white rounded py-1 px-2 whitespace-nowrap z-[100] font-normal"
+										>Settings</span
+									>
+								</a>
+							</div>
+						</div>
+						<div
+							class="sticky inset-x-0 bottom-0 border-t border-gray-100 dark:border-gray-700 bg-foreground dark:bg-background-dark p-2"
+						>
+							<!-- Logout -->
+							<div class="relative" x-data="{ tooltip: false }">
+								<form action="#">
+									<button
+										type="submit"
+										class="group relative flex w-full justify-center rounded-sm px-2 py-1.5 text-sm text-gray-500 hover:bg-primary dark:hover:bg-primary-dark dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+										@mouseover="tooltip = true"
+										@mouseleave="tooltip = false"
+									>
+										<!-- Logout Icon -->
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="size-5 opacity-75"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+											stroke-width="2"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+											/>
+										</svg>
+									</button>
+									<span
+										x-show="tooltip"
+										x-transition
+										class="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 w-max bg-slate-800 text-white rounded py-1 px-2 whitespace-nowrap z-[100] font-normal"
+									>
+										Logout
+									</span>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -613,13 +623,7 @@
                     'ml-0': true
                 }"
 			>
-				<div class="card card-body min-h-[200vh]">
-					<h1
-						class="text-xl md:text-2xl font-bold text-foreground-dark dark:text-foreground"
-					>
-						Dashboard
-					</h1>
-				</div>
+				<!--  -->
 			</div>
 
 			<!-- Mobile Bottom Menu -->

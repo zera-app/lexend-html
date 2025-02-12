@@ -41,19 +41,6 @@ npm install && npm run dev
 - [ ] Dashboard 2
 - [ ] Dashboard 3
 
-## Pages & Layout
-
-- [ ] Login
-- [ ] SignUp
-- [ ] ForgotPassword
-- [ ] Reset Password
-- [ ] Profile
-- [ ] Setting
-- [ ] Layout 1
-- [ ] Layout 2
-- [ ] Layout 3
-- [ ] Layout 4
-
 ## Next Release
 
 - [ ] wyswyd input (tinymce or something else)
