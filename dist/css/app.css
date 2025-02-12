@@ -946,9 +946,6 @@
   .bg-slate-400 {
     background-color: var(--color-slate-400);
   }
-  .bg-slate-700 {
-    background-color: var(--color-slate-700);
-  }
   .bg-slate-800 {
     background-color: var(--color-slate-800);
   }
@@ -1063,9 +1060,6 @@
   }
   .text-danger {
     color: var(--color-danger);
-  }
-  .text-dark {
-    color: var(--color-dark);
   }
   .text-foreground-dark {
     color: var(--color-foreground-dark);
@@ -3265,35 +3259,7 @@ p, a, li, span {
   overflow-x: auto;
 }
 .tab-button::-webkit-scrollbar {
-  width: 8px;
-}
-.tab-button::-webkit-scrollbar-track {
-  background-color: var(--color-slate-100);
-  &:where(.dark, .dark *) {
-    background-color: var(--color-slate-800);
-  }
-}
-.tab-button::-webkit-scrollbar-thumb {
-  border-radius: var(--radius-md);
-  background-color: var(--color-slate-200);
-  &:where(.dark, .dark *) {
-    background-color: var(--color-slate-700);
-  }
-}
-.tab-button::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-slate-300);
-  &:where(.dark, .dark *) {
-    background-color: var(--color-slate-600);
-  }
-}
-.dark .tab-button::-webkit-scrollbar-track {
-  background-color: var(--color-slate-900);
-}
-.dark .tab-button::-webkit-scrollbar-thumb {
-  background-color: var(--color-slate-800);
-}
-.dark .tab-button::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-slate-700);
+  display: none;
 }
 .tab nav {
   display: flex;
@@ -3350,9 +3316,18 @@ p, a, li, span {
     color: var(--color-primary-dark);
   }
 }
+.table-container {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 table {
   width: 100%;
   text-align: left;
+}
+.table-container::-webkit-scrollbar {
+  display: none;
 }
 thead {
   border-bottom-style: var(--tw-border-style);
@@ -3413,8 +3388,14 @@ tr {
   }
 }
 td, th {
-  padding-inline: calc(var(--spacing) * 4);
-  padding-block: calc(var(--spacing) * 2);
+  padding-inline: calc(var(--spacing) * 2);
+  padding-block: calc(var(--spacing) * 1);
+  @media (width >= 48rem) {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  @media (width >= 48rem) {
+    padding-block: calc(var(--spacing) * 2);
+  }
 }
 .button {
   cursor: pointer;

@@ -1,5 +1,13 @@
+.table-container {
+	@apply w-full block overflow-x-auto whitespace-nowrap;
+}
+
 table {
 	@apply w-full text-left;
+}
+
+.table-container::-webkit-scrollbar {
+	display: none;
 }
 
 thead {
@@ -44,5 +52,5 @@ td {
 
 td,
 th {
-	@apply px-4 py-2;
+	@apply px-2 py-1 md:px-4 md:py-2;
 }
