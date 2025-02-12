@@ -35,11 +35,6 @@ npm install && npm run dev
 
 # TODO
 
-## Component
-
-- [ ] Table
-- [ ] Tooltip
-
 ## Dashboard
 
 - [ ] Dashboard 1
@@ -69,3 +64,4 @@ npm install && npm run dev
 - [ ] input mask (phone, money)
 - [ ] select2
 - [ ] dropdown for file input
+- [ ] Datatable with datatables.net
