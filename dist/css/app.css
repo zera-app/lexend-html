@@ -1076,6 +1076,10 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -1087,6 +1091,10 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -1286,6 +1294,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .md\:text-2xl {
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
@@ -1427,6 +1440,11 @@
   .dark\:text-slate-700 {
     &:where(.dark, .dark *) {
       color: var(--color-slate-700);
+    }
+  }
+  .dark\:text-slate-800 {
+    &:where(.dark, .dark *) {
+      color: var(--color-slate-800);
     }
   }
   .dark\:text-success-dark {
@@ -7343,6 +7361,9 @@ html.dark body {
     background-color: var(--color-background-dark);
   }
 }
+div.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -7472,6 +7493,10 @@ html.dark body {
   initial-value: 100%;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -7612,10 +7637,6 @@ html.dark body {
   inherits: false;
 }
 @property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }

@@ -92,3 +92,7 @@ html.dark body {
 .mobile-menu-popup {
 	@apply bg-background dark:bg-background-dark fixed bottom-[60px] -translate-x-[50%] left-1/2 w-11/12 max-w-320 rounded-lg shadow-md z-50 transition-transform duration-200 ease-in-out;
 }
+
+div.hide-scroll::-webkit-scrollbar {
+	display: none;
+}
