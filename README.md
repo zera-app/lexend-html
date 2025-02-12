@@ -43,10 +43,6 @@ npm install && npm run dev
 
 ## Pages & Layout
 
-- [ ] Login
-- [ ] SignUp
-- [ ] ForgotPassword
-- [ ] Reset Password
 - [ ] Profile
 - [ ] Setting
 - [ ] Layout 1
