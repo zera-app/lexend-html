@@ -691,12 +691,58 @@
 										<td>@johndoe</td>
 										<td>email@johndoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -705,12 +751,58 @@
 										<td>@janedoe</td>
 										<td>email@janedoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -746,12 +838,58 @@
 										<td>@johndoe</td>
 										<td>email@johndoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -760,12 +898,58 @@
 										<td>@janedoe</td>
 										<td>email@janedoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -800,12 +984,58 @@
 										<td>@johndoe</td>
 										<td>email@johndoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -814,12 +1044,58 @@
 										<td>@janedoe</td>
 										<td>email@janedoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -828,12 +1104,58 @@
 										<td>@fidel</td>
 										<td>fidel@fidel.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -842,12 +1164,58 @@
 										<td>@bonie</td>
 										<td>email@bonnie.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -882,12 +1250,58 @@
 										<td>@johndoe</td>
 										<td>email@johndoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -896,12 +1310,58 @@
 										<td>@janedoe</td>
 										<td>email@janedoe.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -910,12 +1370,58 @@
 										<td>@fidel</td>
 										<td>fidel@fidel.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -924,12 +1430,58 @@
 										<td>@bonie</td>
 										<td>email@bonnie.com</td>
 										<td>
-											<button class="button button-sm button-primary">
-												Edit
-											</button>
-											<button class="button button-sm button-danger">
-												Delete
-											</button>
+											<div
+												x-data="{ dropdownOpen: false }"
+												@click.away="dropdownOpen = false"
+												class="relative"
+											>
+												<button
+													class="button button-sm button-primary"
+													@click="dropdownOpen = !dropdownOpen"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														stroke-width="2"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+														x-bind:class="{ 'rotate-180': dropdownOpen }"
+													>
+														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+														<path d="M6 10l6 6l6 -6h-12" />
+													</svg>
+												</button>
+
+												<div
+													x-show="dropdownOpen"
+													x-transition
+													class="dropdown w-fit"
+													role="menu"
+												>
+													<div class="drop-shadow-2xl">
+														<a href="#" class="dropdown-item" role="menuitem">
+															Edit
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Detail
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Delete
+														</a>
+
+														<a href="#" class="dropdown-item" role="menuitem">
+															Unpublish Product
+														</a>
+													</div>
+												</div>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -944,7 +1496,7 @@
 					</div>
 				</div>
 
-				<!-- <div class="card-table mt-4" x-data="{ tableFilter: false }">
+				<div class="card-table mt-4" x-data="{ tableFilter: false }">
 					<div class="card-header">
 						<h2 class="card-title">Datatable</h2>
 					</div>
@@ -1018,12 +1570,58 @@
 									<td>@johndoe</td>
 									<td>email@johndoe.com</td>
 									<td>
-										<button class="button button-sm button-primary">
-											Edit
-										</button>
-										<button class="button button-sm button-danger">
-											Delete
-										</button>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
 									</td>
 								</tr>
 								<tr>
@@ -1032,12 +1630,58 @@
 									<td>@janedoe</td>
 									<td>email@janedoe.com</td>
 									<td>
-										<button class="button button-sm button-primary">
-											Edit
-										</button>
-										<button class="button button-sm button-danger">
-											Delete
-										</button>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
 									</td>
 								</tr>
 								<tr>
@@ -1046,12 +1690,58 @@
 									<td>@fidel</td>
 									<td>fidel@fidel.com</td>
 									<td>
-										<button class="button button-sm button-primary">
-											Edit
-										</button>
-										<button class="button button-sm button-danger">
-											Delete
-										</button>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
 									</td>
 								</tr>
 								<tr>
@@ -1060,12 +1750,58 @@
 									<td>@bonie</td>
 									<td>email@bonnie.com</td>
 									<td>
-										<button class="button button-sm button-primary">
-											Edit
-										</button>
-										<button class="button button-sm button-danger">
-											Delete
-										</button>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
 									</td>
 								</tr>
 							</tbody>
@@ -1077,7 +1813,7 @@
 							</tfoot>
 						</table>
 					</div>
-				</div> -->
+				</div>
 			</div>
 
 			<!-- Mobile Bottom Menu -->

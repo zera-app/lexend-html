@@ -35,12 +35,6 @@ npm install && npm run dev
 
 # TODO
 
-## Dashboard
-
-- [ ] Dashboard 1
-- [ ] Dashboard 2
-- [ ] Dashboard 3
-
 ## Next Release
 
 - [ ] wyswyd input (tinymce or something else)
