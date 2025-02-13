@@ -1,5 +1,5 @@
 .dropdown {
-	@apply absolute z-10 isolate mt-2 w-56 rounded-md bg-foreground dark:bg-foreground-dark shadow-md border border-slate-300 dark:border-slate-800;
+	@apply absolute z-10 isolate mt-2 w-auto rounded-md bg-foreground dark:bg-foreground-dark shadow-md border border-slate-300 dark:border-slate-800;
 }
 
 .dropdown-content {
