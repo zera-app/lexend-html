@@ -30,10 +30,3 @@ h5 {
 h6 {
 	@apply text-base;
 }
-
-p,
-a,
-li,
-span {
-	@apply text-base;
-}
