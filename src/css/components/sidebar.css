@@ -108,7 +108,7 @@
 }
 
 .sidebar-backdrop {
-	@apply fixed inset-0 bg-gray-600/30 backdrop-blur-sm z-30 md:hidden;
+	@apply fixed inset-0 bg-gray-600/30 backdrop-blur-sm z-10 md:hidden;
 }
 
 .sidebar-footer {
