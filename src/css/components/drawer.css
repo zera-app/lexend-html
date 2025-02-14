@@ -49,15 +49,15 @@
 }
 
 .drawer-left {
-	@apply left-0 top-0 h-full z-30 isolate overflow-y-auto;
+	@apply left-0 top-0 h-full z-[60] isolate overflow-y-auto;
 }
 
 .drawer-right {
-	@apply right-0 top-0 h-full z-30 isolate overflow-y-auto;
+	@apply right-0 top-0 h-full z-[60] isolate overflow-y-auto;
 }
 
 .drawer-bottom {
-	@apply left-0 bottom-0 z-30 isolate overflow-y-auto;
+	@apply left-0 bottom-0 z-[60] isolate overflow-y-auto;
 }
 
 .drawer-open {

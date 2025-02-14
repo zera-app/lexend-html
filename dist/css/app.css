@@ -689,9 +689,6 @@
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
-  .ml-3 {
-    margin-left: calc(var(--spacing) * 3);
-  }
   .block {
     display: block;
   }
@@ -1460,6 +1457,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .lg\:grid-cols-12 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -1746,6 +1748,27 @@ h6 {
   width: calc(var(--spacing) * 2);
   border-radius: calc(infinity * 1px);
   background-color: var(--color-red-500);
+}
+.nav-title {
+  margin-left: calc(var(--spacing) * 3);
+  overflow-x: hidden;
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @media (width >= 48rem) {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  @media (width >= 64rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  &:where(.dark, .dark *) {
+    color: var(--color-white);
+  }
 }
 .sidebar-icon-button {
   position: relative;
@@ -2086,7 +2109,7 @@ h6 {
   z-index: 40;
   display: flex;
   height: calc(100vh - 4rem);
-  width: calc(var(--spacing) * 64);
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   border-inline-end-style: var(--tw-border-style);
@@ -2105,6 +2128,9 @@ h6 {
   }
   @media (width >= 48rem) {
     top: calc(var(--spacing) * 0);
+  }
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 64);
   }
   &:where(.dark, .dark *) {
     border-color: var(--color-slate-800);
@@ -3156,7 +3182,7 @@ h6 {
   top: calc(var(--spacing) * 0);
   left: calc(var(--spacing) * 0);
   isolation: isolate;
-  z-index: 30;
+  z-index: 60;
   height: 100%;
   overflow-y: auto;
 }
@@ -3164,7 +3190,7 @@ h6 {
   top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 0);
   isolation: isolate;
-  z-index: 30;
+  z-index: 60;
   height: 100%;
   overflow-y: auto;
 }
@@ -3172,7 +3198,7 @@ h6 {
   bottom: calc(var(--spacing) * 0);
   left: calc(var(--spacing) * 0);
   isolation: isolate;
-  z-index: 30;
+  z-index: 60;
   overflow-y: auto;
 }
 .drawer-open {
