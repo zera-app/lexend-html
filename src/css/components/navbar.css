@@ -10,3 +10,7 @@
 .navbar-notification-badge {
 	@apply absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full;
 }
+
+.nav-title {
+	@apply ml-3 text-sm md:text-base lg:text-xl font-semibold dark:text-white whitespace-nowrap text-ellipsis overflow-x-hidden;
+}

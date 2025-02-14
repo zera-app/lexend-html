@@ -27,11 +27,14 @@ npm install && npm run dev
 - [HyperUi](https://www.hyperui.dev)
 - [Tailwind Element](https://tw-elements.com/)
 - [Flowbite](https://flowbite.com/)
+- [Dribbble](http://dribbble.com/)
+- [Shadcn](https://ui.shadcn.com/)
 
 ## Package Use
 
 - Alpine Js Latest
 - Tailwindcss 4
+- Apexchart
 
 # TODO
 

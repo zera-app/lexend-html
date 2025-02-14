@@ -108,6 +108,7 @@
 								>
 									<!-- Tabler menu icon -->
 									<svg
+										x-show="!sidebarOpen"
 										xmlns="http://www.w3.org/2000/svg"
 										class="icon icon-tabler icon-tabler-menu-2 w-6 h-6 dark:text-gray-200"
 										width="24"
@@ -124,8 +125,25 @@
 										<line x1="4" y1="12" x2="20" y2="12" />
 										<line x1="4" y1="18" x2="20" y2="18" />
 									</svg>
+									<svg
+										x-show="sidebarOpen"
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+									>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M18 6l-12 12" />
+										<path d="M6 6l12 12" />
+									</svg>
 								</button>
-								<span class="ml-3 text-xl font-semibold dark:text-white"
+								<span class="nav-title"
 									><a href="/src">Fexend Dashboard</a></span
 								>
 							</div>
@@ -759,93 +777,95 @@
 					</div>
 				</div>
 
-				<div class="card mt-4 card-primary">
-					<div class="card-header">
-						<h2 class="card-title">Primary Card</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+					<div class="card card-primary">
+						<div class="card-header">
+							<h2 class="card-title">Primary Card</h2>
+						</div>
+						<div class="card-body">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Distinctio itaque, at rem ab delectus, iusto dignissimos
+								consequatur eligendi omnis perspiciatis, quasi voluptas iure
+								cupiditate temporibus. Nihil deleniti officiis impedit
+								dignissimos?
+							</p>
+						</div>
 					</div>
-					<div class="card-body">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Distinctio itaque, at rem ab delectus, iusto dignissimos
-							consequatur eligendi omnis perspiciatis, quasi voluptas iure
-							cupiditate temporibus. Nihil deleniti officiis impedit
-							dignissimos?
-						</p>
-					</div>
-				</div>
 
-				<div class="card mt-4 card-secondary">
-					<div class="card-header">
-						<h2 class="card-title">Secondary Card</h2>
+					<div class="card card-secondary">
+						<div class="card-header">
+							<h2 class="card-title">Secondary Card</h2>
+						</div>
+						<div class="card-body">
+							<p>
+								This is a secondary card. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit.
+							</p>
+						</div>
+						<div class="card-footer">
+							<p>Footer content for secondary card.</p>
+						</div>
 					</div>
-					<div class="card-body">
-						<p>
-							This is a secondary card. Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit.
-						</p>
-					</div>
-					<div class="card-footer">
-						<p>Footer content for secondary card.</p>
-					</div>
-				</div>
 
-				<div class="card mt-4 card-info">
-					<div class="card-header">
-						<h2 class="card-title">Info Card</h2>
+					<div class="card card-info">
+						<div class="card-header">
+							<h2 class="card-title">Info Card</h2>
+						</div>
+						<div class="card-body">
+							<p>
+								This is an info card. Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit.
+							</p>
+						</div>
+						<div class="card-footer">
+							<p>Footer content for info card.</p>
+						</div>
 					</div>
-					<div class="card-body">
-						<p>
-							This is an info card. Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit.
-						</p>
-					</div>
-					<div class="card-footer">
-						<p>Footer content for info card.</p>
-					</div>
-				</div>
 
-				<div class="card mt-4 card-success">
-					<div class="card-header">
-						<h2 class="card-title">Success Card</h2>
+					<div class="card card-success">
+						<div class="card-header">
+							<h2 class="card-title">Success Card</h2>
+						</div>
+						<div class="card-body">
+							<p>
+								This is a success card. Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit.
+							</p>
+						</div>
+						<div class="card-footer">
+							<p>Footer content for success card.</p>
+						</div>
 					</div>
-					<div class="card-body">
-						<p>
-							This is a success card. Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit.
-						</p>
-					</div>
-					<div class="card-footer">
-						<p>Footer content for success card.</p>
-					</div>
-				</div>
 
-				<div class="card mt-4 card-warning">
-					<div class="card-header">
-						<h2 class="card-title">Warning Card</h2>
+					<div class="card card-warning">
+						<div class="card-header">
+							<h2 class="card-title">Warning Card</h2>
+						</div>
+						<div class="card-body">
+							<p>
+								This is a warning card. Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit.
+							</p>
+						</div>
+						<div class="card-footer">
+							<p>Footer content for warning card.</p>
+						</div>
 					</div>
-					<div class="card-body">
-						<p>
-							This is a warning card. Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit.
-						</p>
-					</div>
-					<div class="card-footer">
-						<p>Footer content for warning card.</p>
-					</div>
-				</div>
 
-				<div class="card mt-4 card-danger">
-					<div class="card-header">
-						<h2 class="card-title">Danger Card</h2>
-					</div>
-					<div class="card-body">
-						<p>
-							This is a danger card. Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit.
-						</p>
-					</div>
-					<div class="card-footer">
-						<p>Footer content for danger card.</p>
+					<div class="card card-danger">
+						<div class="card-header">
+							<h2 class="card-title">Danger Card</h2>
+						</div>
+						<div class="card-body">
+							<p>
+								This is a danger card. Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit.
+							</p>
+						</div>
+						<div class="card-footer">
+							<p>Footer content for danger card.</p>
+						</div>
 					</div>
 				</div>
 			</div>

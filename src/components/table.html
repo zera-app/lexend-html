@@ -108,6 +108,7 @@
 								>
 									<!-- Tabler menu icon -->
 									<svg
+										x-show="!sidebarOpen"
 										xmlns="http://www.w3.org/2000/svg"
 										class="icon icon-tabler icon-tabler-menu-2 w-6 h-6 dark:text-gray-200"
 										width="24"
@@ -124,8 +125,25 @@
 										<line x1="4" y1="12" x2="20" y2="12" />
 										<line x1="4" y1="18" x2="20" y2="18" />
 									</svg>
+									<svg
+										x-show="sidebarOpen"
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+									>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M18 6l-12 12" />
+										<path d="M6 6l12 12" />
+									</svg>
 								</button>
-								<span class="ml-3 text-xl font-semibold dark:text-white"
+								<span class="nav-title"
 									><a href="/src">Fexend Dashboard</a></span
 								>
 							</div>
