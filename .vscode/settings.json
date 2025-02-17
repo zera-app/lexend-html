@@ -19,5 +19,5 @@
 		"editor.formatOnPaste": true
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"cSpell.words": ["Apexchart"]
+	"cSpell.words": ["Apexchart", "flatpickr", "tailwindcss"]
 }
