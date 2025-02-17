@@ -4,6 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fexend Dashboard</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+		/>
 		<link rel="stylesheet" defer href="/dist/css/app.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -273,7 +278,7 @@
 										stroke-linejoin="round"
 										class="icon icon-tabler icons-tabler-outline icon-tabler-moon w-6 h-6 dark:text-gray-200"
 									>
-										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path stroke="none" d="M0 0h24H0z" fill="none" />
 										<path
 											d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
 										/>
@@ -774,10 +779,148 @@
 						<h2 class="card-title">Flatpickr</h2>
 					</div>
 					<div class="card-body">
-						<p>
-							TODO: implement datetime picker, date picker, time picker, date
-							range picker using flatpicker
-						</p>
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<div>
+								<label for="date">Date</label>
+								<input
+									type="text"
+									id="flatpickr"
+									name="date"
+									placeholder="Select a date"
+									class="flatpickr-input"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Date & Time Picker</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<div>
+								<label for="datetime">Date & Time</label>
+								<input
+									type="text"
+									id="datetime"
+									name="datetime"
+									placeholder="Select date and time"
+									class="flatpickr-input"
+								/>
+							</div>
+							<div>
+								<label for="time">Time Only</label>
+								<input
+									type="text"
+									id="time"
+									name="time"
+									placeholder="Select time"
+									class="flatpickr-input"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Date Range Picker</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6">
+							<div>
+								<label for="daterange">Date Range</label>
+								<input
+									type="text"
+									id="daterange"
+									name="daterange"
+									placeholder="Select date range"
+									class="flatpickr-input"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Weekday/Weekend Restrictions</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<div>
+								<label for="weekday">Weekdays Only</label>
+								<input
+									type="text"
+									id="weekday"
+									name="weekday"
+									placeholder="Select weekday"
+									class="flatpickr-input"
+								/>
+							</div>
+							<div>
+								<label for="weekend">Weekends Only</label>
+								<input
+									type="text"
+									id="weekend"
+									name="weekend"
+									placeholder="Select weekend"
+									class="flatpickr-input"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Date Limits</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+							<div>
+								<label for="maxToday">Max Date Today</label>
+								<input
+									type="text"
+									id="maxToday"
+									name="maxToday"
+									placeholder="Select past date"
+									class="flatpickr-input"
+								/>
+							</div>
+							<div>
+								<label for="minToday">Min Date Today</label>
+								<input
+									type="text"
+									id="minToday"
+									name="minToday"
+									placeholder="Select future date"
+									class="flatpickr-input"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-4">
+					<div class="card-header">
+						<h2 class="card-title">Multiple Dates</h2>
+					</div>
+					<div class="card-body">
+						<div class="grid grid-cols-1 gap-6">
+							<div>
+								<label for="multiple">Multiple Dates</label>
+								<input
+									type="text"
+									id="multiple"
+									name="multiple"
+									placeholder="Select multiple dates"
+									class="flatpickr-input"
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -974,5 +1117,70 @@
 				</div>
 			</div>
 		</main>
+
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Basic date picker
+				flatpickr("#flatpickr", {
+					altInput: true,
+					altFormat: "F j, Y",
+					dateFormat: "Y-m-d",
+				});
+
+				// Date and time picker
+				flatpickr("#datetime", {
+					enableTime: true,
+					dateFormat: "Y-m-d H:i",
+				});
+
+				// Time only picker
+				flatpickr("#time", {
+					enableTime: true,
+					noCalendar: true,
+					dateFormat: "H:i",
+				});
+
+				// Date range picker
+				flatpickr("#daterange", {
+					mode: "range",
+					dateFormat: "Y-m-d",
+				});
+
+				// Weekdays only
+				flatpickr("#weekday", {
+					enable: [
+						function (date) {
+							return date.getDay() !== 0 && date.getDay() !== 6;
+						},
+					],
+				});
+
+				// Weekends only
+				flatpickr("#weekend", {
+					enable: [
+						function (date) {
+							return date.getDay() === 0 || date.getDay() === 6;
+						},
+					],
+				});
+
+				// Max date today
+				flatpickr("#maxToday", {
+					maxDate: "today",
+				});
+
+				// Min date today
+				flatpickr("#minToday", {
+					minDate: "today",
+				});
+
+				// Multiple dates
+				flatpickr("#multiple", {
+					mode: "multiple",
+					dateFormat: "Y-m-d",
+				});
+			});
+		</script>
 	</body>
 </html>

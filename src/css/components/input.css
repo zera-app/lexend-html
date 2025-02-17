@@ -47,6 +47,7 @@ textarea:disabled {
 	cursor-not-allowed;
 }
 
+input:read-only:not([class*="flatpickr-input"]),
 input:read-only,
 textarea:read-only {
 	@apply bg-slate-100 
