@@ -5,6 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fexend Dashboard</title>
 		<link rel="stylesheet" defer href="/dist/css/app.css" />
+		<!-- <link
+			href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+			rel="stylesheet"
+		/> -->
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -812,10 +816,42 @@
 						<h2 class="card-title">Select2</h2>
 					</div>
 					<div class="card-body">
-						<p>
-							TODO: select with select2, implement select with api, tag,
-							multiple select and more
-						</p>
+						<div class="form-group">
+							<label for="">Select <span class="text-danger">*</span></label>
+							<select name="">
+								<option selected>Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="">Select <span class="text-danger">*</span></label>
+							<select name="" class="form-select2">
+								<option selected>Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="">Select <span class="text-danger">*</span></label>
+							<select name="" class="form-select2-multiple" multiple="multiple">
+								<option selected>Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="">Select <span class="text-danger">*</span></label>
+							<select name="" class="form-select2-tag" multiple="multiple">
+								<option selected>Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1012,5 +1048,29 @@
 				</div>
 			</div>
 		</main>
+
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				$(".form-select2").select2({
+					width: "100%",
+				});
+				$(".form-select2-multiple").select2({
+					width: "100%",
+					multiple: true,
+				});
+				$(".form-select2-tag").select2({
+					width: "100%",
+					tags: true,
+				});
+			});
+		</script>
 	</body>
 </html>
