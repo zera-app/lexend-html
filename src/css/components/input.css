@@ -138,3 +138,35 @@ label input[type="checkbox"] {
 .form-rounded {
 	@apply rounded-full;
 }
+
+.input-icon-left {
+	@apply relative;
+}
+
+.input-icon-left input {
+	@apply pl-10;
+}
+
+.input-icon-left svg {
+	@apply absolute left-3 top-3/4 transform -translate-y-3/4 text-slate-500;
+}
+
+.input-icon-left input:focus + svg {
+	@apply text-primary;
+}
+
+.input-icon-right {
+	@apply relative;
+}
+
+.input-icon-right input {
+	@apply pr-10;
+}
+
+.input-icon-right svg {
+	@apply absolute right-3 top-3/4 transform -translate-y-3/4 text-slate-500;
+}
+
+.input-icon-right input:focus + svg {
+	@apply text-primary;
+}

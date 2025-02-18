@@ -5698,6 +5698,42 @@ label input[type="radio"], label input[type="checkbox"] {
 .form-rounded {
   border-radius: calc(infinity * 1px);
 }
+.input-icon-left {
+  position: relative;
+}
+.input-icon-left input {
+  padding-left: calc(var(--spacing) * 10);
+}
+.input-icon-left svg {
+  position: absolute;
+  top: calc(3/4 * 100%);
+  left: calc(var(--spacing) * 3);
+  --tw-translate-y: calc(calc(3/4 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  color: var(--color-slate-500);
+}
+.input-icon-left input:focus + svg {
+  color: var(--color-primary);
+}
+.input-icon-right {
+  position: relative;
+}
+.input-icon-right input {
+  padding-right: calc(var(--spacing) * 10);
+}
+.input-icon-right svg {
+  position: absolute;
+  top: calc(3/4 * 100%);
+  right: calc(var(--spacing) * 3);
+  --tw-translate-y: calc(calc(3/4 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  color: var(--color-slate-500);
+}
+.input-icon-right input:focus + svg {
+  color: var(--color-primary);
+}
 label.form-radio {
   margin-inline: calc(var(--spacing) * 4);
   display: inline-flex;
