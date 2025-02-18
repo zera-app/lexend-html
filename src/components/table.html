@@ -5,6 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fexend Dashboard</title>
 		<link rel="stylesheet" defer href="/dist/css/app.css" />
+		<!-- <link
+			rel="stylesheet"
+			href="//cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css"
+		/> -->
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1832,6 +1836,924 @@
 						</table>
 					</div>
 				</div>
+
+				<div class="card-table mt-4" x-data="{ tableFilter: false }">
+					<div class="card-header">
+						<h2 class="card-title">Datatables.net</h2>
+					</div>
+
+					<div
+						class="card-content flex flex-wrap gap-4 justify-between items-center"
+					>
+						<div class="flex items-center gap-4">
+							<button class="button button-primary">Add</button>
+							<button
+								class="button button-primary button-icon button-rounded"
+								@click="tableFilter = !tableFilter"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-horizontal"
+								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+									<path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+									<path d="M4 6l8 0" />
+									<path d="M16 6l4 0" />
+									<path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+									<path d="M4 12l2 0" />
+									<path d="M10 12l10 0" />
+									<path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+									<path d="M4 18l11 0" />
+									<path d="M19 18l1 0" />
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<div
+						class="table-filter"
+						x-show="tableFilter"
+						x-transition
+						x-collapse
+					>
+						<div class="form-group">
+							<label for="filter">Filter</label>
+							<select name="filter" id="filter">
+								<option value="all">All</option>
+								<option value="active">Active</option>
+								<option value="inactive">Inactive</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="table-container">
+						<table id="datatable" class="striped">
+							<thead>
+								<th>#</th>
+								<th>Name</th>
+								<th>Username</th>
+								<th>Email</th>
+								<th>Action</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>John Doe</td>
+									<td>@johndoe</td>
+									<td>email@johndoe.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Jane Doe</td>
+									<td>@janedoe</td>
+									<td>email@janedoe.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Fidel</td>
+									<td>@fidel</td>
+									<td>fidel@fidel.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bonnie</td>
+									<td>@bonie</td>
+									<td>email@bonnie.com</td>
+									<td>
+										<div
+											x-data="{ dropdownOpen: false }"
+											@click.away="dropdownOpen = false"
+											class="relative"
+										>
+											<button
+												class="button button-sm button-primary"
+												@click="dropdownOpen = !dropdownOpen"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down transition-transform duration-200"
+													x-bind:class="{ 'rotate-180': dropdownOpen }"
+												>
+													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+													<path d="M6 10l6 6l6 -6h-12" />
+												</svg>
+											</button>
+
+											<div
+												x-show="dropdownOpen"
+												x-transition
+												class="dropdown w-fit"
+												role="menu"
+											>
+												<div class="drop-shadow-2xl">
+													<a href="#" class="dropdown-item" role="menuitem">
+														Edit
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Detail
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Delete
+													</a>
+
+													<a href="#" class="dropdown-item" role="menuitem">
+														Unpublish Product
+													</a>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+
+							<tfoot>
+								<tr>
+									<td colspan="5">This is the footer</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
 			</div>
 
 			<!-- Mobile Bottom Menu -->
@@ -2026,5 +2948,22 @@
 				</div>
 			</div>
 		</main>
+
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("table#datatable").DataTable({
+					paging: true,
+					searching: true,
+					ordering: true,
+					responsive: true,
+				});
+			});
+		</script>
 	</body>
 </html>
