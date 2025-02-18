@@ -851,10 +851,55 @@
 						<h2 class="card-title">Input Mask</h2>
 					</div>
 					<div class="card-body">
-						<p>
-							TODO: input mask, like money, phone number, use cleave.js or
-							alpine.js
-						</p>
+						<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+							<div class="form-group">
+								<label for="phone"
+									>Phone <span class="text-danger">*</span></label
+								>
+								<input
+									type="text"
+									id="cleave-phone"
+									class="form-mask"
+									placeholder="Phone"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="date"
+									>Date <span class="text-danger">*</span></label
+								>
+								<input
+									type="text"
+									id="cleave-date"
+									class="form-mask"
+									placeholder="Date (dd/mm/yyyy)"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="time"
+									>Time <span class="text-danger">*</span></label
+								>
+								<input
+									type="text"
+									id="cleave-time"
+									class="form-mask"
+									placeholder="Time (hh:mm:ss)"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="credit-card"
+									>Credit Card <span class="text-danger">*</span></label
+								>
+								<input
+									type="text"
+									id="cleave-credit-card"
+									class="form-mask"
+									placeholder="Credit Card (xxxx xxxx xxxx xxxx)"
+									required
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1051,5 +1096,46 @@
 				</div>
 			</div>
 		</main>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"
+			integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave-phone.id.js"
+			integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script> -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const phoneCleave = document.getElementById("cleave-phone");
+				const dateCleave = document.getElementById("cleave-date");
+				const timeCleave = document.getElementById("cleave-time");
+				const cardCleave = document.getElementById("cleave-credit-card");
+
+				// have no idea why this is not working
+				// const phone = new Cleave(phoneCleave, {
+				// 	phone: true,
+				// 	phoneRegionCode: "US",
+				// });
+
+				const date = new Cleave(dateCleave, {
+					date: true,
+					datePattern: ["m", "d", "Y"],
+				});
+
+				const time = new Cleave(timeCleave, {
+					time: true,
+					timePattern: ["h", "m", "s"],
+				});
+
+				const card = new Cleave(cardCleave, {
+					creditCard: true,
+				});
+			});
+		</script>
 	</body>
 </html>
