@@ -421,7 +421,7 @@
 												stroke-linejoin="round"
 												class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-html"
 											>
-												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path stroke="none" d="M0 0h24h24H0z" fill="none" />
 												<path d="M14 3v4a1 1 0 0 0 1 1h4" />
 												<path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
 												<path d="M2 21v-6" />
@@ -462,7 +462,7 @@
 												stroke-linejoin="round"
 												class="icon icon-tabler icons-tabler-outline icon-tabler-components"
 											>
-												<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+												<path stroke="none" d="M0 0h24h24H0z" fill="none" />
 												<path d="M3 12l3 3l3 -3l-3 -3z" />
 												<path d="M15 12l3 3l3 -3l-3 -3z" />
 												<path d="M9 6l3 3l3 -3l-3 -3z" />
@@ -597,7 +597,7 @@
 										>
 											<path
 												fill-rule="evenodd"
-												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
 												clip-rule="evenodd"
 											/>
 										</svg>
@@ -693,7 +693,7 @@
 			>
 				<div class="card">
 					<div class="card-header">
-						<h2 class="card-title">Default</h1>
+						<h2 class="card-title">Default</h2>
 					</div>
 					<div class="card-body">
 						<div class="form-group">
@@ -702,18 +702,18 @@
 						</div>
 						<div class="form-group">
 							<label>Form disabled <span class="text-info">*</span></label>
-							<input type="text" placeholder="Form name" required disabled/>
+							<input type="text" placeholder="Form name" required disabled />
 						</div>
 						<div class="form-group">
 							<label>Form readonly<span class="text-info">*</span></label>
-							<input type="text" placeholder="Form name" required readonly/>
+							<input type="text" placeholder="Form name" required readonly />
 						</div>
 					</div>
 				</div>
 
 				<div class="card mt-4">
 					<div class="card-header">
-						<h2 class="card-title">Form Error</h1>
+						<h2 class="card-title">Form Error</h2>
 					</div>
 					<div class="card-body">
 						<div class="form-group">
@@ -732,7 +732,7 @@
 
 				<div class="card mt-4">
 					<div class="card-header">
-						<h2 class="card-title">Form Valid</h1>
+						<h2 class="card-title">Form Valid</h2>
 					</div>
 					<div class="card-body">
 						<div class="form-group">
@@ -751,7 +751,7 @@
 
 				<div class="card mt-4">
 					<div class="card-header">
-						<h2 class="card-title">Form Rounded</h1>
+						<h2 class="card-title">Form Rounded</h2>
 					</div>
 					<div class="card-body">
 						<div class="form-group">
@@ -798,10 +798,51 @@
 
 				<div class="card mt-4">
 					<div class="card-header">
-						<h2 class="card-title">Input Group</h2>
+						<h2 class="card-title">Input with Icon</h2>
 					</div>
 					<div class="card-body">
-						<p>TODO: input with icon or input group</p>
+						<div class="form-group input-icon-left">
+							<label>Input with left icon</label>
+							<input type="text" placeholder="Input with left icon" />
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-home"
+							>
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+								<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+								<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+							</svg>
+						</div>
+						<div class="form-group input-icon-right mt-4">
+							<label>Input with right icon</label>
+							<input type="text" placeholder="Input with right icon" />
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-home"
+							>
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+								<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+								<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+							</svg>
+						</div>
 					</div>
 				</div>
 
@@ -810,7 +851,10 @@
 						<h2 class="card-title">Input Mask</h2>
 					</div>
 					<div class="card-body">
-						<p>TODO: input mask, like money, phone number, use cleave.js or alpine.js</p>
+						<p>
+							TODO: input mask, like money, phone number, use cleave.js or
+							alpine.js
+						</p>
 					</div>
 				</div>
 			</div>
