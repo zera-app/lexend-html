@@ -285,11 +285,11 @@
 	@apply text-[#999];
 }
 .select2-container--default .select2-results__option--selected {
-	/* @apply; */
+	/* @apply ; */
 }
 .select2-container--default
 	.select2-results__option--highlighted.select2-results__option--selectable {
-	@apply text-[white];
+	@apply text-slate-800 dark:text-slate-200;
 }
 .select2-container--default .select2-results__group {
 	@apply cursor-default block p-1.5;

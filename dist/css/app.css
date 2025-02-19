@@ -8257,7 +8257,10 @@ span.flatpickr-weekday {
   color: #999;
 }
 .select2-container--default	.select2-results__option--highlighted.select2-results__option--selectable {
-  color: white;
+  color: var(--color-slate-800);
+  &:where(.dark, .dark *) {
+    color: var(--color-slate-200);
+  }
 }
 .select2-container--default .select2-results__group {
   display: block;
