@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Fexend Dashboard</title>
+		<title>Fexend</title>
 		<link rel="stylesheet" defer href="/dist/css/app.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -144,9 +144,7 @@
 										<path d="M6 6l12 12" />
 									</svg>
 								</button>
-								<span class="nav-title"
-									><a href="/src">Fexend Dashboard</a></span
-								>
+								<span class="nav-title"><a href="/src">Fexend</a></span>
 							</div>
 
 							<div class="flex items-center gap-4">
@@ -652,13 +650,16 @@
 					class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-4"
 					x-data="{cardOpen: 'general'}"
 				>
-					<div class="card lg:col-span-8 transition-transform" x-show="cardOpen === 'general'">
+					<div
+						class="card lg:col-span-8 transition-transform"
+						x-show="cardOpen === 'general'"
+					>
 						<form action="" x-data="{ alertOpen: false, isEditing: false }">
 							<div class="card-header flex justify-between items-center">
 								<h2 class="card-title">General Profile</h2>
-								<button 
-									type="button" 
-									class="button button-primary" 
+								<button
+									type="button"
+									class="button button-primary"
 									x-show="!isEditing"
 									@click="isEditing = true"
 								>
@@ -678,7 +679,9 @@
 								</div>
 								<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 									<div class="form-group">
-										<label for="name">Name <span class="text-danger">*</span></label>
+										<label for="name"
+											>Name <span class="text-danger">*</span></label
+										>
 										<input
 											type="text"
 											id="name"
@@ -689,7 +692,9 @@
 										/>
 									</div>
 									<div class="form-group">
-										<label for="email">Email <span class="text-danger">*</span></label>
+										<label for="email"
+											>Email <span class="text-danger">*</span></label
+										>
 										<input
 											type="email"
 											id="email"
@@ -700,7 +705,9 @@
 										/>
 									</div>
 									<div class="form-group">
-										<label for="phone">Phone <span class="text-danger">*</span></label>
+										<label for="phone"
+											>Phone <span class="text-danger">*</span></label
+										>
 										<input
 											type="text"
 											id="phone"
@@ -711,7 +718,9 @@
 										/>
 									</div>
 									<div class="form-group">
-										<label for="address">Address <span class="text-danger">*</span></label>
+										<label for="address"
+											>Address <span class="text-danger">*</span></label
+										>
 										<input
 											type="text"
 											id="address"
